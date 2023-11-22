@@ -22,11 +22,12 @@
 
 - [x] 拥有漂亮耳钉
 - [x] 染粉色头发 (Be BOLD)
-- [ ] 我想把这玩意染成绿的.jpg
+- [x] 我想把这玩意染成绿的.jpg
 
 ### With My Passion to Explore and See the World
 
-- [x] 和盐盐一起去看音乐剧 泰坦尼克！
+- [x] 看音乐剧 罗密欧与朱丽叶！Six！法语gala！泰坦尼克！
+- [ ] 看莫里哀（maybe only in France TT）
 - [ ] 去百老汇听音乐剧 NewYork BroadWay: In NewYork You Can Be a New Man :eyes:
 - [ ] 睡大街（露营 Maybe）
 - [ ] 去冲浪和潜水

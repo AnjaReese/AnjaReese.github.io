@@ -2,17 +2,15 @@
 
 ### 1. 去月牙楼探险！
 
-#### 我最爱的盐宝
-
-![mon amour](./img/mon_amour.jpeg)
-
-> 帅的嘞 :eyes:
-
 #### 很帅的法语涂鸦
 
 ![mon amour](./img/illcomebackonedayfrance.jpeg)
 
 > un jour je serai de retour pres det toi "有一天我会回到你身边"
+
+#### 很帅的鬼
+
+![mon_amour](./img/mon_amour.jpeg)
 
 ### 2. 在月牙楼涂鸦
 

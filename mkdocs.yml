@@ -1,8 +1,8 @@
 site_name: Anya's BucketList
 site_description: idk
-site_url: http://anyareese.top  #站点网址 URL，根可位于域名的子目录中
-site_author: AnyaReese
-copyright: AnyaReese
+site_url: https://anjareese.github.io/mymkdocs  #站点网址 URL，根可位于域名的子目录中
+site_author: AnjaReese
+copyright: AnjaReese
 
 theme: 
   name: material  

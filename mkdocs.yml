@@ -1,0 +1,149 @@
+site_name: Anya's Adventure
+site_description: idk
+site_url: https://anjareese.github.io/mymkdocs  #站点网址 URL，根可位于域名的子目录中
+site_author: AnjaReese
+copyright: AnjaReese
+
+theme: 
+  name: material  
+  language: zh    
+  favicon: img/favicon.ico
+  custom_dir: overrides
+  features:  #导航
+    - navigation.instant  #即时加载
+    - navigation.tracking  #锚点跟踪
+    - navigation.tabs  #导航选项卡
+    - navigation.tabs.sticky  #粘性导航选项卡
+    - navigation.sections  #次级目录在侧边栏中呈现为组，与tabs同存则有2级导航
+    - navigation.expand  #左侧边栏全展开，取消则折叠其他只展开当选
+    - navigation.indexes  #次级索引页，直接将文档附加到章节，提供概览页面，在相应文件夹中创建index.md添加到导航nav开头。不兼容toc.integrate。
+    - toc.follow   #锚跟随，文章小标题目录侧边栏自动滚动，以便活动锚点始终可见（付费功能）
+    - navigation.top  #返回顶端
+    - search.suggest  #搜索建议，省略回车
+    - search.highlight  #搜索词高亮突出显示
+    - search.share   #搜索共享
+    - header.autohide  #标题自动隐藏
+    - announce.dismiss  #标记为已读（付费功能）
+  palette:
+    - scheme: default
+  font:  #字体，false 则阻止从Google加载字体
+  # 内置隐私插件自动下载和自托管 Web 字体文件，无需阻止。其他字体使用附加样式表 extra.css 。
+    text: Roboto  #常规字体，默认Roboto，正文、标题等，300、400、400i和700
+    code: Roboto Mono  #等宽字体，默认Roboto Mono，代码块，400
+
+extra_javascript:
+  - https://cdn.tonycrane.cc/utils/katex.min.js
+  - js/katex.js
+
+extra_css:
+  - https://cdn.tonycrane.cc/utils/katex.min.css
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - css/tasklist.css
+  - css/custom.css
+  - css/card.css
+  - css/flink.css
+  - css/changelog_extra.css
+  - css/counter.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AnyaReese/
+analytics:
+    provider: custom
+    property: G-DYETCPM289
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:
+    not_found: ignore
+    absolute_links: ignore
+    unrecognized_links: ignore
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+
+
+plugins:
+  - rss
+  - search
+  - glightbox:
+      width: 80%
+  - statistics:
+      page_check_metadata: comment
+  - toc
+  - heti
+  # - tikzautomata
+
+not_in_nav: 
+    slides/
+
+nav:
+  - Hi There: 
+
+    - index.md
+
+  - ZJU Course:
+
+    - FDS:
+      - FDS/Notes/Week4_2023-10-10.md
+
+    - OOP:
+      - 基本概念: OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
+      - 类与对象: OOP/notes/Week 5 类与对象.md
+      - 类与对象2: OOP/notes/Week7 类与对象的其他性质.md
+      - 模板及 STL: OOP/notes/模板及 STL.md
+
+    - SYS:
+      - Class Notes:
+        - ISA Priciples: SYS2/notes/Week1_Overview and ISA Principles.md
+        - Pipeline: SYS2/notes/Week2_Pipelining.md
+        - Pipeline Lab: SYS2/notes/Week3_Pipelining_lab.md
+      - reports:
+        - SYS2/lab1/lab1_report.md
+        - SYS2/lab2/lab2 report.md
+        - SYS2/lab3/lab3-report.md
+        - SYS2/lab4/3220103784-Lab4-bonus.md
+
+  - CS Courses:
+    - CS61B:
+      - CS61B start: FDS/Notes/CS61B.md
+
+  - Me the Weirdo being Weird:
+  
+    - My bucket List:
+      - Bucket List: index.md
+
+

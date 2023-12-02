@@ -7,7 +7,7 @@ copyright: AnjaReese
 theme: 
   name: material  
   language: zh    
-  favicon: img/favicon.ico
+  favicon: assets/img/favicon.ico
   custom_dir: overrides
   features:  #导航
     - navigation.instant  #即时加载
@@ -109,6 +109,11 @@ plugins:
 
 not_in_nav: 
     slides/
+    codes/
+    code/
+    slide/
+    Misc/
+    daily/
 
 nav:
   - Hi There: 
@@ -118,13 +123,18 @@ nav:
   - ZJU Course:
 
     - FDS:
-      - FDS/Notes/Week4_2023-10-10.md
+      - Class Notes:
+        - Overview: FDS/Notes/0. Overview.md
+        - Tree: FDS/Notes/1. Tree.md
+        - Graph: FDS/Notes/2. Graph.md
+
 
     - OOP:
-      - 基本概念: OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
-      - 类与对象: OOP/notes/Week 5 类与对象.md
-      - 类与对象2: OOP/notes/Week7 类与对象的其他性质.md
-      - 模板及 STL: OOP/notes/模板及 STL.md
+      - OOP:
+        - 基本概念: OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
+        - 类与对象: OOP/notes/Week 5 类与对象.md
+        - 类与对象2: OOP/notes/Week7 类与对象的其他性质.md
+        - 模板及 STL: OOP/notes/模板以及 STL.md
 
     - SYS:
       - Class Notes:
@@ -144,6 +154,6 @@ nav:
   - Me the Weirdo being Weird:
   
     - My bucket List:
-      - Bucket List: index.md
+      - Bucket List: about.md
 
 

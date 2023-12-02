@@ -4,7 +4,6 @@
 *.out
 *.cpp
 *.py
-*.git
 
 .obsidian/
 .vscode/

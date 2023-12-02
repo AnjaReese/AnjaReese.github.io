@@ -97,12 +97,7 @@ markdown_extensions:
 
 
 plugins:
-  - rss
   - search
-  - glightbox:
-      width: 80%
-  - statistics:
-      page_check_metadata: comment
   - toc
   - heti
   # - tikzautomata

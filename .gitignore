@@ -4,6 +4,7 @@
 *.out
 *.cpp
 *.py
+.DS_Store
 
 .obsidian/
 .vscode/

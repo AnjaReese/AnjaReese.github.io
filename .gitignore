@@ -4,13 +4,14 @@
 *.out
 *.cpp
 *.py
-*.DS_Store
+.DS_Store
 
 .obsidian/
 .vscode/
 .idea/
 code/
 codes/
+bucket_list/README.md
 
 # Prerequisites
 *.d

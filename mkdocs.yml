@@ -117,10 +117,10 @@ nav:
 
     - FDS:
       - Class Notes:
-        - Overview: FDS/Notes/0. Overview.md
-        - Tree: FDS/Notes/1. Tree.md
-        - Graph: FDS/Notes/2. Graph.md
-        - Sorting: FDS/Notes/3. Sorting.md
+        - Overview: FDS/Notes/0.Overview.md
+        - Tree: FDS/Notes/1.Tree.md
+        - Graph: FDS/Notes/2.Graph.md
+        - Sorting: FDS/Notes/3.Sorting.md
 
     - OOP:
       - OOP:

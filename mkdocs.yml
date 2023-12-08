@@ -120,7 +120,7 @@ nav:
         - Overview: FDS/Notes/0. Overview.md
         - Tree: FDS/Notes/1. Tree.md
         - Graph: FDS/Notes/2. Graph.md
-
+        - Sorting: FDS/Notes/3. Sorting.md
 
     - OOP:
       - OOP:
@@ -138,7 +138,7 @@ nav:
         - SYS2/lab1/lab1_report.md
         - SYS2/lab2/lab2 report.md
         - SYS2/lab3/lab3-report.md
-        - SYS2/lab4/3220103784-Lab4-bonus.md
+        - lab4-bonus: SYS2/lab4/3220103784-Lab4-bonus.md
 
   - CS Courses:
     - CS61B:

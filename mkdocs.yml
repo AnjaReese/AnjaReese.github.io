@@ -115,26 +115,25 @@ nav:
 
   - ZJU Course:
 
-    - FDS:
-      - Class Notes:
+    - ZJU Course:
+
+      - FDS Class Notes:
         - Overview: FDS/Notes/0.Overview.md
         - Tree: FDS/Notes/1.Tree.md
         - Graph: FDS/Notes/2.Graph.md
         - Sorting: FDS/Notes/3.Sorting.md
 
-    - OOP:
       - OOP:
         - 基本概念: OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
         - 类与对象: OOP/notes/Week 5 类与对象.md
         - 类与对象2: OOP/notes/Week7 类与对象的其他性质.md
         - 模板及 STL: OOP/notes/模板以及 STL.md
 
-    - SYS:
-      - Class Notes:
+      - SYS Class Notes:
         - ISA Priciples: SYS2/notes/Week1_Overview and ISA Principles.md
         - Pipeline: SYS2/notes/Week2_Pipelining.md
         - Pipeline Lab: SYS2/notes/Week3_Pipelining_lab.md
-      - reports:
+      - SYS reports:
         - SYS2/lab1/lab1_report.md
         - SYS2/lab2/lab2 report.md
         - SYS2/lab3/lab3-report.md

@@ -27,10 +27,7 @@ text: true
 
 ### Architectures
 
-```slide-note
-file: [[SYS2/slides/lec01-2(1).pdf]]
-page: 9
-```
+![](../../assets/SYS2/SYS2GPRSpecification.png)
 
 - Stack Architecture
 - Accumulator Architecture
@@ -71,7 +68,7 @@ pop  D
 - **One explicit operand**: mem location
 - Accumulator is both an **implicit input** operand and a **result**
 
-```assembly
+```arm-asm
 load  B
 mul   C
 add   A
@@ -84,7 +81,7 @@ store D
 
 #### Register-Memory Architectures
 
-```assembly
+```arm-asm
 load  R1, A
 mul   R1, B
 load  R2, C
@@ -97,34 +94,20 @@ store R1, D
 
 #### Register Operands
 
-```slide-note
-file: [[lec01-2(1).pdf]]
-page: 36
-```
+![](../../assets/SYS2/SYS2RegsiterOperand.png)
 
 Memory Operand Examples
 
-```slide-note
-file: [[SYS2/slides/lec01-2(1).pdf]]
-page: 38
-```
+![](../../assets/SYS2/SYS2ISAPrinciple.png)
+
 
 #### Caller Saving and Callee Saving P484
 
-```slide-note
-file: [[SYS2/slides/lec01-2(1).pdf]]
-page: 52-53
-```
+![](../../assets/SYS2/SYS2ProcedureCall.png)
 
 叶子过程示例
 
-```slide-note
-file: [[SYS2/slides/lec01-2(1).pdf]]
-page: 54
-```
+![](../../assets/SYS2/SYS2LeafProcedureExample.png)
 
-```slide-note
-file: [[SYS2/slides/lec01-2(1).pdf]]
-page: 25
-```
+![](../../assets/SYS2/SYS2ProcedureInvoke.png)
 

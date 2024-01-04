@@ -122,6 +122,7 @@ nav:
         - Tree: FDS/Notes/1.Tree.md
         - Graph: FDS/Notes/2.Graph.md
         - Sorting: FDS/Notes/3.Sorting.md
+        - Hashing: FDS/Notes/4.Hashing.md
 
       - OOP:
         - 基本概念: OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md

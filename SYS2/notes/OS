@@ -1,0 +1,43 @@
+# 进程间通信 IPC InterProcess Communication
+
+https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_message_queues.htm
+
+http://www.science.unitn.it/~fiorella/guidelinux/tlk/node57.html
+
+Why do we need message queues when we already have the shared memory?
+
+当我们已经拥有共享内存时，为什么还需要消息队列？
+
+- As understood, once the message is received by a process it would be no longer available for any other process. Whereas in shared memory, the data is available for multiple processes to access.
+  - 据了解，一旦消息被进程接收到，它将不再可用于任何其他进程。而在共享内存中，数据可供多个进程访问。
+
+- If we want to communicate with small message formats.
+  - 如果我们想用小消息格式进行通信。
+
+- Shared memory data need to be protected with synchronization when multiple processes communicating at the same time.
+  - 需要同步手段
+
+- Frequency of writing and reading using the shared memory is high, then it would be very complex to implement the functionality. Not worth with regard to utilization in this kind of cases.
+  - 使用共享内存的写入和读取频率很高，因此实现该功能将非常复杂。在这种情况下，不值得使用
+
+- What if all the processes do not need to access the shared memory but very few processes only need it, it would be better to implement with message queues.
+  - 如果所有进程都不需要访问共享内存，但只有极少数进程只需要它，那么最好使用消息队列来实现。
+
+- Ofcourse, the order of message queue is FIFO (First In First Out). The first message inserted in the queue is the first one to be retrieved.
+    - 当然，消息队列的顺序是FIFO（先进先出）。队列中插入的第一条消息是要检索的第一条消息。
+
+To perform communication using message queues, following are the steps −
+要使用消息队列执行通信，请执行以下步骤 -
+
+**Step 1** − Create a message queue or connect to an already existing message queue (msgget())
+步骤1 - 创建消息队列或连接到已存在的消息队列（msgget（））
+
+**Step 2** − Write into message queue (msgsnd())
+第 2 步 - 写入消息队列 （msgsnd（））
+
+**Step 3** − Read from the message queue (msgrcv())
+步骤3 - 从消息队列中读取（msgrcv（））
+
+**Step 4** − Perform control operations on the message queue (msgctl())
+步骤4 - 对消息队列执行控制操作（msgctl（））
+

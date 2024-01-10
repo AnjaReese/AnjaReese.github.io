@@ -37,7 +37,7 @@ page: 40
 
 友元不是该类的成员函数，但是可以**访问**该类的**私有成员**。
 
-#### 2. 1 普通函数作为友元函数
+#### 2.1.1 1 普通函数作为友元函数
 
 ```cpp
 friend ReturnType FuncName(argvs);
@@ -47,7 +47,7 @@ friend ReturnType FuncName(argvs);
 - 友元函数的声明可以放在类声明中的任何位置，即不受访问权限的控制；
 - 友元函数可以通过对象名访问类的所有成员，包括私有成员。
 
-#### 友元类
+#### 2.1.2 友元类
 
 ```cpp
 friend class ClassName;
@@ -56,7 +56,7 @@ friend class ClassName;
 - 友元类的声明同样可以在类声明中的任何位置；
 - 友元类的所有成员函数将都成为友元函数。
 
-## 继承与派生
+## 3 继承与派生
 
 - 通过继承机制，可以利用已有数据类型来定义新的数据类型。
 - 所定义的新的派生类，不仅拥有新定义的成员（数据成员、成员函数），而且还同时拥有旧的基类的成员。
@@ -76,7 +76,7 @@ class <派生类名>:<继承方式><派生类成员声明> {
 
 ![[Pasted image 20231122091137.png]]
 
-#### 公有继承 public inheritance
+#### 3.1.1 公有继承 public inheritance
 
 - 当类的继承方式为 public （公有），基类的公有成员（ public ）和保护成员 （ protected ）在派生类中保持原有访问属性，其私有成员（ private ）仍为基类私有。
 - 派生类类内：可以访问基类中的公有成员和保护成员，而基类的私有成员则不能被访问。
@@ -146,8 +146,8 @@ int main(){
 }
 ```
 
-#### 私有继承 private inheritance
+#### 3.1.2 私有继承 private inheritance
 
 
 
-#### 保护继承 protected inheritance
+#### 3.1.3 保护继承 protected inheritance

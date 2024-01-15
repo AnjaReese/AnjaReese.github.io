@@ -12,6 +12,7 @@
 code/
 codes/
 bucket_list/README.md
+venv/
 
 # Prerequisites
 *.d

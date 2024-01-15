@@ -135,10 +135,12 @@ nav:
         - Pipeline: SYS2/notes/Week2_Pipelining.md
         - Pipeline Lab: SYS2/notes/Week3_Pipelining_lab.md
       - SYS reports:
-        - SYS2/lab1/lab1_report.md
-        - SYS2/lab2/lab2 report.md
-        - SYS2/lab3/lab3-report.md
-        - lab4-bonus: SYS2/lab4/3220103784-Lab4-bonus.md
+        - lab1:pipeline with stall: SYS2/labs/lab1/lab1_report.md
+        - lab2:forwarding and Axies: SYS2/labs/lab2/lab2 report.md
+        - lab3:simple OS: SYS2/labs/lab3/lab3-report.md
+        - lab4:time interrupt: SYS2/labs/lab4/3220103784-Lab4-bonus.md
+        # - lab5
+        # - lab6
 
   - CS Courses:
     - CS61B:

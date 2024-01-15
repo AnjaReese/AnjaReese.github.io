@@ -23,9 +23,9 @@ text: true
 
 > [!Note] with **attendence** as bonus
 
-## Instruction Set Principles
+## 1 Instruction Set Principles
 
-### Architectures
+### 1.1 Architectures
 
 ![](../../assets/SYS2/SYS2GPRSpecification.png)
 
@@ -36,7 +36,7 @@ text: true
 > [!Note] e.g. D = A \* B - (A + C \* B)
 
 
-#### **Stack** Architecture 
+#### 1.1.1 **Stack** Architecture 
 
 - **Implicit Operands** : on the Top Of the Stack (TOS)
 - Simple example: 98 * (12 + 45) 
@@ -62,7 +62,7 @@ sub
 pop  D
 ```
 
-#### Accumulator Architecture
+#### 1.1.2 Accumulator Architecture
 
 - **One implicit operand**: the accumulator 
 - **One explicit operand**: mem location
@@ -79,7 +79,7 @@ sub   D
 store D
 ```
 
-#### Register-Memory Architectures
+#### 1.1.3 Register-Memory Architectures
 
 ```arm-asm
 load  R1, A
@@ -92,7 +92,7 @@ sub   R1, D
 store R1, D
 ```
 
-#### Register Operands
+#### 1.1.4 Register Operands
 
 ![](../../assets/SYS2/SYS2RegsiterOperand.png)
 
@@ -101,7 +101,7 @@ Memory Operand Examples
 ![](../../assets/SYS2/SYS2ISAPrinciple.png)
 
 
-#### Caller Saving and Callee Saving P484
+#### 1.1.5 Caller Saving and Callee Saving P484
 
 ![](../../assets/SYS2/SYS2ProcedureCall.png)
 

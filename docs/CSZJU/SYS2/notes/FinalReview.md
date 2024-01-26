@@ -16,13 +16,13 @@
 > 冲突向量 Conflict Vector，预约表 Reservation Table，状态图 State transition graph，调度方式 Circular Queue，最短平均启动距离 Shortest average interval
 >
 
-![](../../../Pasted%20image%2020240105212408.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105212408.png)
 
 ### 1.1 不同 ISA 架构下的指令实现
 
 #### 1.1.1 Architectures
 
-![](../../assets/SYS2/SYS2GPRSpecification.png)
+![](../../../assets/SYS2/SYS2GPRSpecification.png)
 
 - Stack Architecture
 - Accumulator Architecture
@@ -89,11 +89,11 @@ store R1, D
 
 ##### 1.1.1.4 Register Operands
 
-![](../../assets/SYS2/SYS2RegsiterOperand.png)
+![](../../../assets/SYS2/SYS2RegsiterOperand.png)
 
 Memory Operand Examples
 
-![](../../assets/SYS2/SYS2ISAPrinciple.png)
+![](../../../assets/SYS2/SYS2ISAPrinciple.png)
 
 #### 1.1.2 指令格式
 
@@ -101,7 +101,7 @@ Memory Operand Examples
 
 #### 1.1.3 种寻址模式以及对应表现形式
 
-![](../../assets/SYS2/sys2riscvAdressMode.png)
+![](../../../assets/SYS2/sys2riscvAdressMode.png)
 
 1. 立即数寻址
 2. 寄存器寻址
@@ -111,7 +111,7 @@ Memory Operand Examples
 
 #### 1.1.4 内存运算
 
-![](../../assets/SYS2/sys2MemoryOperands.png)
+![](../../../assets/SYS2/sys2MemoryOperands.png)
 
 - 大端序，小端序
 
@@ -119,7 +119,7 @@ Memory Operand Examples
 
 > [!Note] 在 i 型指令中，没有减法指令，使用负数
 
-![](../../assets/SYS2/SYS2ImmediateOperands.png)
+![](../../../assets/SYS2/SYS2ImmediateOperands.png)
 
 ### 1.2 PipeLine 流水线
 
@@ -130,13 +130,13 @@ Memory Operand Examples
 - Stage / Segment
 - Depth
 
-![](../../assets/SYS2/sys2Whatispipelining.png)
+![](../../../assets/SYS2/sys2Whatispipelining.png)
 
-![](../../assets/SYS2/SYS2CharactersofPipelining.png)
+![](../../../assets/SYS2/SYS2CharactersofPipelining.png)
 
 应用场景和损耗计算（头尾时间）
 
-![](../../assets/SYS2/SYS2PipelineUsage.png)
+![](../../../assets/SYS2/SYS2PipelineUsage.png)
 
 #### 1.2.2 流水线分类
 
@@ -144,9 +144,9 @@ Memory Operand Examples
 	- 静态流水线
 	- 动态流水线
 
-![](../../assets/SYS2/sys2StaticandDynamic.png)
+![](../../../assets/SYS2/sys2StaticandDynamic.png)
 
-![](../../assets/SYS2/SYS2PipelineLinearandNonLinear.png)
+![](../../../assets/SYS2/SYS2PipelineLinearandNonLinear.png)
 
 #### 1.2.3 Riscv 特点
 
@@ -155,7 +155,7 @@ Memory Operand Examples
 - 寻址方式分类
 - 有对齐过程
 
-![](../../assets/SYS2/SYS2RiscvDesign.png)
+![](../../../assets/SYS2/SYS2RiscvDesign.png)
 
 #### 1.2.4 流水线性能
 
@@ -165,50 +165,50 @@ Memory Operand Examples
 > 要会计算几个标准的性能指标：最简单的方式，把三个公式全抄下来（）但要搞清楚物理量是什么
 > 给一张表，流水线 CPU 的时钟周期如何确定？
 
-![](../../assets/SYS2/HowPipeliningImprovesPerformance.png)
+![](../../../assets/SYS2/HowPipeliningImprovesPerformance.png)
 
-![](../../assets/SYS2/PipelinePerformance.png)
+![](../../../assets/SYS2/PipelinePerformance.png)
 
 ##### 1.2.4.1 时钟周期计算
 
-![](../../assets/SYS2/TImeCLockCalc.png)
+![](../../../assets/SYS2/TImeCLockCalc.png)
 
 ##### 1.2.4.2 吞吐量计算 TP：不能不写单位 e.g. 1/ps
 
-![](../../assets/SYS2/PipelineThroughput.png)
+![](../../../assets/SYS2/PipelineThroughput.png)
 
 ##### 1.2.4.3 加速比 SpeedUp
 
-![](../../assets/SYS2/PipelineSpeedUp.png)
+![](../../../assets/SYS2/PipelineSpeedUp.png)
 
 ##### 1.2.4.4 Efficiency
 
-![](../../assets/SYS2/PipelineEfficiency.png)
+![](../../../assets/SYS2/PipelineEfficiency.png)
 
 #### 1.2.5 Diagram
 
-![](../../assets/SYS2/PipelineDiagram.png)
+![](../../../assets/SYS2/PipelineDiagram.png)
 
-![](../../assets/SYS2/DiagramAtSigleClock.png)
+![](../../../assets/SYS2/DiagramAtSigleClock.png)
 
 #### 1.2.6 控制器：
 
 > [!note] 考点：
 > 7个 **基本控制信号**（多/少 写出核心的）
 
-![](../../assets/SYS2/Pasted%20image%2020240105000829.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105000829.png)
 
 #### 1.2.7 冲突
 
 在现代处理器设计上，控制冲突是核心部分。因为数据冒险都是可预测的，但控制冒险很难解决
 
-![](../../assets/SYS2/Pasted%20image%2020240105001014.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105001014.png)
 
 ##### 1.2.7.1 HowToStall
 
 改成 Nop（伪指令，实际上不存在，但..:）可以 **考选择题**
 
-![](../../assets/SYS2/NopInst.png)
+![](../../../assets/SYS2/NopInst.png)
 
 ##### 1.2.7.2 数据冲突
 
@@ -219,24 +219,24 @@ Memory Operand Examples
 EX冲突：写数据在EX阶段产生
 MEM冲突：一般为Load指令，在访问内存之后产生
 
-![](../../assets/SYS2/TheNeedToForwarding.png)
+![](../../../assets/SYS2/TheNeedToForwarding.png)
 
-![](../../assets/SYS2/SYS2onlyif.png)
+![](../../../assets/SYS2/SYS2onlyif.png)
 
-![](../../assets/SYS2/Pasted%20image%2020240105003035.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105003035.png)
 
 > [!note] 考点：相关接线
 
-![](../../assets/SYS2/Pasted%20image%2020240105185832.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105185832.png)
 
 #### 1.2.8 非线性流水线
 
 > [!note] 相关概念:
 > 冲突向量 Conflict Vector，预约表 Reservation Table，状态图 State transition graph，调度方式 Circular Queue，最短平均启动距离 Shortest average interval
 
-![](../../assets/SYS2/Pasted%20image%2020240105191036.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105191036.png)
 
-![](../../assets/SYS2/Pasted%20image%2020240105191051.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105191051.png)
 
 > 以下非线性流水线搬运自 tonycrane.cc orz
 
@@ -250,7 +250,7 @@ MEM冲突：一般为Load指令，在访问内存之后产生
 
 如下图就是一个非线性流水线的连接图，和它的一个预约表：
 
-![](../../assets/SYS2/Pasted%20image%2020240105201904.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105201904.png)
 
 | |1|2|3|4|5|6|7|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -280,7 +280,7 @@ MEM冲突：一般为Load指令，在访问内存之后产生
 
 **State transition graph**
 
-![](../../../Pasted%20image%2020240105201943.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105201943.png)
 
 所以它的几种调度方式（用启动距离表示）和平均启动距离为：
 <div style="text-align: center" markdown="1">
@@ -305,10 +305,10 @@ MEM冲突：一般为Load指令，在访问内存之后产生
 
 #### 1.2.9 并行运行/多发射
 
-![](../../../Pasted%20image%2020240105203858.png) 
+![](../../../assets/SYS2/Pasted%20image%2020240105203858.png) 
 
 记住区别
 
-![](../../../Pasted%20image%2020240105211922.png)
+![](../../../assets/SYS2/Pasted%20image%2020240105211922.png)
 
-![](../../../Pasted%20image%2020240106010838.png)
+![](../../../assets/SYS2/Pasted%20image%2020240106010838.png)

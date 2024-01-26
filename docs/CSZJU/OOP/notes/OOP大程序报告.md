@@ -114,7 +114,7 @@ MFC（Microsoft Foundation Classes）是微软提供的一套用于开发Windows
 
 类图：
 
-![](../../assets/OOP/OOPBigHwClassDiagram.png)
+![](../../../assets/OOP/OOPBigHwClassDiagram.png)
 
 ## 4. 源代码文件组织设计
 
@@ -216,15 +216,15 @@ MFC（Microsoft Foundation Classes）是微软提供的一套用于开发Windows
 
 环境使用 VS2022，OpenGL 的文件已经包含在文件夹里，打开工程文件，重新生成解决方案，即可运行。
 
-![](../../assets/OOP/oopx862.png)
+![](../../../assets/OOP/oopx862.png)
 
-![](../../assets/OOP/ooprunbighw.png)
+![](../../../assets/OOP/ooprunbighw.png)
 
 ### 4.2 使用操作
 
 点击菜单栏的 “操作说明”，可以查看键盘以及滚轮的使用方法；点击模型
 
-![](../../assets/OOP/oopbighwprojecthowtouse.png)
+![](../../../assets/OOP/oopbighwprojecthowtouse.png)
 
 | 快捷键 | 效果           |
 | ------ | -------------- |

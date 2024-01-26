@@ -1,6 +1,6 @@
-> [[lec02-1.pdf]]
-> [[lec02-2(1).pdf]]
-> [[lec03-1.pdf]]
+> [[../slides/lec02-1.pdf]]
+> [[../slides/lec02-2(1).pdf]]
+> [[../slides/lec03-1.pdf]]
 
 ## 1 顺序执行与重叠执行
 

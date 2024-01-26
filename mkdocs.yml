@@ -10,7 +10,7 @@ theme:
   favicon: assets/img/favicon.ico
   custom_dir: overrides
   features:  #导航
-    - navigation.instant  #即时加载
+    # - navigation.instant  #即时加载 不注释会发生需要多刷新一次才能渲染网页公式
     - navigation.tracking  #锚点跟踪
     - navigation.tabs  #导航选项卡
     - navigation.tabs.sticky  #粘性导航选项卡
@@ -118,33 +118,35 @@ nav:
     - ZJU Course:
 
       - FDS Class Notes:
-        - Overview: FDS/Notes/0.Overview.md
-        - Tree: FDS/Notes/1.Tree.md
-        - Graph: FDS/Notes/2.Graph.md
-        - Sorting: FDS/Notes/3.Sorting.md
-        - Hashing: FDS/Notes/4.Hashing.md
+        - Overview: CSZJU/FDS/Notes/0.Overview.md
+        - Tree: CSZJU/FDS/Notes/1.Tree.md
+        - Graph: CSZJU/FDS/Notes/2.Graph.md
+        - Sorting: CSZJU/FDS/Notes/3.Sorting.md
+        - Hashing: CSZJU/FDS/Notes/4.Hashing.md
 
       - OOP:
-        - 基本概念: OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
-        - 类与对象: OOP/notes/Week 5 类与对象.md
-        - 类与对象2: OOP/notes/Week7 类与对象的其他性质.md
-        - 模板及 STL: OOP/notes/模板以及 STL.md
+        - 基本概念: CSZJU/OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
+        - 类与对象: CSZJU/OOP/notes/Week 5 类与对象.md
+        - 类与对象2: CSZJU/OOP/notes/Week7 类与对象的其他性质.md
+        - 模板及 STL: CSZJU/OOP/notes/模板以及 STL.md
 
-      - SYS Class Notes:
-        - ISA Priciples: SYS2/notes/Week1_Overview and ISA Principles.md
-        - Pipeline: SYS2/notes/Week2_Pipelining.md
-        - Pipeline Lab: SYS2/notes/Week3_Pipelining_lab.md
-      - SYS reports:
-        - lab1:pipeline with stall: SYS2/labs/lab1/lab1_report.md
-        - lab2:forwarding and Axies: SYS2/labs/lab2/lab2 report.md
-        - lab3:simple OS: SYS2/labs/lab3/lab3-report.md
-        - lab4:time interrupt: SYS2/labs/lab4/3220103784-Lab4-bonus.md
-        # - lab5
-        # - lab6
+      - SYS2:
+        - Class Notes:
+          - ISA Priciples: CSZJU/SYS2/notes/Week1_Overview and ISA Principles.md
+          - Pipeline: CSZJU/SYS2/notes/Week2_Pipelining.md
+          - Pipeline Lab: CSZJU/SYS2/notes/Week3_Pipelining_lab.md
+
+        - SYS reports:
+          - Lab1:pipeline with stall: CSZJU/SYS2/labs/lab1/lab1_report.md
+          - Lab2:forwarding and Axies: CSZJU/SYS2/labs/lab2/lab2 report.md
+          - Lab3:RV64 内核引导: CSZJU/SYS2/labs/lab3/lab3-report.md
+          - Lab4:RV64 时钟中断处理: CSZJU/SYS2/labs/lab4/3220103784-Lab4-bonus.md
+          - Lab5:RV64 内核线程调度: CSZJU/SYS2/labs/lab5/3220103784-lab5.md
+          - Lab6:综合实验: CSZJU/SYS2/labs/lab6/3220103784-林子昕.md
 
   - CS Courses:
     - CS61B:
-      - CS61B start: FDS/Notes/CS61B.md
+      - CS61B start: CSCourse/CS61B/CS61B 1.md
 
   - 备忘:
     - 备忘:

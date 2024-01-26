@@ -1,4 +1,4 @@
-slide: ![[lec01-1(1).pdf]]
+slide: ![[../slides/lec01-1(1).pdf]]
 
 ----
 
@@ -27,7 +27,7 @@ text: true
 
 ### 1.1 Architectures
 
-![](../../assets/SYS2/SYS2GPRSpecification.png)
+![](../../../assets/SYS2/SYS2GPRSpecification.png)
 
 - Stack Architecture
 - Accumulator Architecture
@@ -94,20 +94,20 @@ store R1, D
 
 #### 1.1.4 Register Operands
 
-![](../../assets/SYS2/SYS2RegsiterOperand.png)
+![](../../../assets/SYS2/SYS2RegsiterOperand.png)
 
 Memory Operand Examples
 
-![](../../assets/SYS2/SYS2ISAPrinciple.png)
+![](../../../assets/SYS2/SYS2ISAPrinciple.png)
 
 
 #### 1.1.5 Caller Saving and Callee Saving P484
 
-![](../../assets/SYS2/SYS2ProcedureCall.png)
+![](../../../assets/SYS2/SYS2ProcedureCall.png)
 
 叶子过程示例
 
-![](../../assets/SYS2/SYS2LeafProcedureExample.png)
+![](../../../assets/SYS2/SYS2LeafProcedureExample.png)
 
-![](../../assets/SYS2/SYS2ProcedureInvoke.png)
+![](../../../assets/SYS2/SYS2ProcedureInvoke.png)
 

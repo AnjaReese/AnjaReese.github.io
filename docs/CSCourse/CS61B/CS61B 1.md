@@ -141,12 +141,12 @@ a=new int[] {1,2,3};
 
 #### Doubly Linked List (Double Sentinel)
 
-![[DoubleListDoubleSentinel.png]]
+![[../slides/DoubleListDoubleSentinel.png]]
 
 #### Doubly Linked List (Circular Sentinel)
 
-![[DoubleListCircularSentinel.png]]
+![[../slides/DoubleListCircularSentinel.png]]
 
 ### Java allows us to defer type selection until declaration
 
-![[deferTypeSelection.png]]
+![[../slides/deferTypeSelection.png]]

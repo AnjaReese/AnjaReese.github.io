@@ -169,7 +169,7 @@ Yes
 Yes
 ```
 
-![](../../../../assets/FDS/Proj3testcases.png)
+![](../../../../../assets/FDS/Proj3testcases.png)
 
 ## Chapter 4: Analysis and Comments
 

@@ -14,8 +14,8 @@ theme:
     - navigation.tracking  #锚点跟踪
     - navigation.tabs  #导航选项卡
     - navigation.tabs.sticky  #粘性导航选项卡
-    - navigation.sections  #次级目录在侧边栏中呈现为组，与tabs同存则有2级导航
-    - navigation.expand  #左侧边栏全展开，取消则折叠其他只展开当选
+    # - navigation.sections  #次级目录在侧边栏中呈现为组，与tabs同存则有2级导航
+    - navigation.expand  #左侧边栏全展开，取消则折叠其他只展开当前
     - navigation.indexes  #次级索引页，直接将文档附加到章节，提供概览页面，在相应文件夹中创建index.md添加到导航nav开头。不兼容toc.integrate。
     - toc.follow   #锚跟随，文章小标题目录侧边栏自动滚动，以便活动锚点始终可见（付费功能）
     - navigation.top  #返回顶端
@@ -24,6 +24,9 @@ theme:
     - search.share   #搜索共享
     - header.autohide  #标题自动隐藏
     - announce.dismiss  #标记为已读（付费功能）
+    - navigation.prune # 侧边栏自动折叠
+    - content.code.annotate # 代码行号
+    - content.code.copy # 代码复制
   palette:
     - scheme: default
   font:  #字体，false 则阻止从Google加载字体
@@ -115,42 +118,40 @@ nav:
 
   - ZJU Course:
 
-    - ZJU Course:
+    - FDS Class Notes:
+      - Overview: CSZJU/FDS/Notes/0.Overview.md
+      - Tree: CSZJU/FDS/Notes/1.Tree.md
+      - Graph: CSZJU/FDS/Notes/2.Graph.md
+      - Sorting: CSZJU/FDS/Notes/3.Sorting.md
+      - Hashing: CSZJU/FDS/Notes/4.Hashing.md
 
-      - FDS Class Notes:
-        - Overview: CSZJU/FDS/Notes/0.Overview.md
-        - Tree: CSZJU/FDS/Notes/1.Tree.md
-        - Graph: CSZJU/FDS/Notes/2.Graph.md
-        - Sorting: CSZJU/FDS/Notes/3.Sorting.md
-        - Hashing: CSZJU/FDS/Notes/4.Hashing.md
+    - OOP:
+      - 基本概念: CSZJU/OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
+      - 类与对象: CSZJU/OOP/notes/Week 5 类与对象.md
+      - 类与对象2: CSZJU/OOP/notes/Week7 类与对象的其他性质.md
+      - 模板及 STL: CSZJU/OOP/notes/模板以及 STL.md
 
-      - OOP:
-        - 基本概念: CSZJU/OOP/notes/Week 1 - Week 4 ：C++ 基本概念.md
-        - 类与对象: CSZJU/OOP/notes/Week 5 类与对象.md
-        - 类与对象2: CSZJU/OOP/notes/Week7 类与对象的其他性质.md
-        - 模板及 STL: CSZJU/OOP/notes/模板以及 STL.md
+    - SYS2:
+      - Class Notes:
+        - ISA Priciples: CSZJU/SYS2/notes/Week1_Overview and ISA Principles.md
+        - Pipeline: CSZJU/SYS2/notes/Week2_Pipelining.md
+        - Pipeline Lab: CSZJU/SYS2/notes/Week3_Pipelining_lab.md
 
-      - SYS2:
-        - Class Notes:
-          - ISA Priciples: CSZJU/SYS2/notes/Week1_Overview and ISA Principles.md
-          - Pipeline: CSZJU/SYS2/notes/Week2_Pipelining.md
-          - Pipeline Lab: CSZJU/SYS2/notes/Week3_Pipelining_lab.md
-
-        - SYS reports:
-          - Lab1:pipeline with stall: CSZJU/SYS2/labs/lab1/lab1_report.md
-          - Lab2:forwarding and Axies: CSZJU/SYS2/labs/lab2/lab2 report.md
-          - Lab3:RV64 内核引导: CSZJU/SYS2/labs/lab3/lab3-report.md
-          - Lab4:RV64 时钟中断处理: CSZJU/SYS2/labs/lab4/3220103784-Lab4-bonus.md
-          - Lab5:RV64 内核线程调度: CSZJU/SYS2/labs/lab5/3220103784-lab5.md
-          - Lab6:综合实验: CSZJU/SYS2/labs/lab6/3220103784-林子昕.md
+      - SYS reports:
+        - Lab1:pipeline with stall: CSZJU/SYS2/labs/lab1/lab1_report.md
+        - Lab2:forwarding and Axies: CSZJU/SYS2/labs/lab2/lab2 report.md
+        - Lab3:RV64 内核引导: CSZJU/SYS2/labs/lab3/lab3-report.md
+        - Lab4:RV64 时钟中断处理: CSZJU/SYS2/labs/lab4/3220103784-Lab4-bonus.md
+        - Lab5:RV64 内核线程调度: CSZJU/SYS2/labs/lab5/3220103784-lab5.md
+        - Lab6:综合实验: CSZJU/SYS2/labs/lab6/3220103784-林子昕.md
 
   - CS Courses:
     - CS61B:
       - CS61B start: CSCourse/CS61B/CS61B 1.md
 
   - 备忘:
-    - 备忘:
-      - 备忘: Misc/备忘.md
+
+    - 备忘: Misc/备忘.md
 
   - Me the Weirdo being Weird:
   

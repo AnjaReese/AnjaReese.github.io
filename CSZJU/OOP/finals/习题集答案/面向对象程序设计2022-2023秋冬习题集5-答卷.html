@@ -1,0 +1,770 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>面向对象程序设计2022-2023秋冬习题集5</title>
+  <style>.paper {
+  margin: 0;
+  font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--text-normal, hsl(0, 0%, 25%));
+}
+.paper *,
+.paper *::before,
+.paper *::after {
+  box-sizing: border-box;
+}
+.paper pre,
+.paper code,
+.paper kbd,
+.paper samp {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+  font-size: 12px;
+}
+.paper pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+.paper label {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.paper hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--scroll-thumb, hsl(0, 0%, 85%));
+  margin: 0;
+}
+.paper .result table {
+  width: 100%;
+}
+.paper .result th,
+.paper .result td {
+  border: 1px solid var(--border-all, hsla(0, 0%, 0%, 0.06));
+  text-align: center;
+}
+.paper .result .box {
+  border: 1px solid var(--border-all, hsla(0, 0%, 0%, 0.06));
+  padding: 8px;
+  color: var(--text-normal, hsl(0, 0%, 25%));
+}
+/* stylelint-disable */
+.ques-view, .rendered-markdown {
+  line-height: 1.5;
+}
+.ques-view p, .rendered-markdown p {
+  margin: 0.5em 0;
+}
+.ques-view h1, .rendered-markdown h1, .ques-view h2, .rendered-markdown h2, .ques-view h3, .rendered-markdown h3, .ques-view h4, .rendered-markdown h4, .ques-view h5, .rendered-markdown h5, .ques-view h6, .rendered-markdown h6 {
+  margin: 0.8em 0;
+}
+.ques-view img, .rendered-markdown img {
+  max-width: 100%;
+}
+.ques-view .ques-list, .rendered-markdown .ques-list {
+  padding-left: 3.125rem;
+}
+.ques-view .ques-list li, .rendered-markdown .ques-list li {
+  position: relative;
+  list-style-type: upper-alpha;
+}
+.ques-view .ques-list input, .rendered-markdown .ques-list input {
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  margin-top: -0.4375rem;
+}
+.ques-view textarea, .rendered-markdown textarea {
+  border-radius: 0.125rem;
+  width: 100%;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  min-height: 6.25rem;
+}
+.ques-view code, .rendered-markdown code {
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-radius: 0.1875rem;
+  border: 1px solid var(--border-all);
+  color: #e74c3c;
+  margin: 0 0.125rem;
+}
+.ques-view pre, .rendered-markdown pre {
+  padding: 0.375rem 0.75rem;
+  background: var(--bg-light);
+  border: 1px solid var(--border-all);
+  border-radius: 0.1875rem;
+  word-break: break-all;
+}
+.ques-view pre code, .rendered-markdown pre code {
+  background: none;
+  border: none;
+  color: var(--text-normal);
+  margin: 0;
+}
+.ques-view hr, .rendered-markdown hr {
+  border: none;
+  border-top: 1px solid var(--border-all);
+}
+.ques-view blockquote, .rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 0.125rem 0.875rem;
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-left: 4px solid var(--border-all);
+}
+.ques-view table, .rendered-markdown table {
+  margin: 0 auto;
+}
+.ques-view table th, .rendered-markdown table th, .ques-view table td, .rendered-markdown table td {
+  border: 1px solid var(--border-all);
+  padding: 0.125rem 0.25rem;
+  font-size: 0.75rem;
+}
+.ques-view .ques-score, .rendered-markdown .ques-score {
+  color: var(--text-light);
+  user-select: none;
+}
+.rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 0.125rem 0.875rem;
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-left: 4px solid var(--border-all);
+}
+.rendered-markdown blockquote p {
+  margin-bottom: 0;
+}
+.rendered-markdown table td, .rendered-markdown table th {
+  border: 1px solid var(--border-all);
+  padding: 0.3125rem;
+}
+.rendered-markdown p:first-child {
+  margin: 0;
+}
+.katex-mathml {
+  display: none;
+}
+.code {
+  font-family: var(--font-mono);
+}
+</style>
+  <link rel="stylesheet" href="https://static.pintia.cn/assets/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<div><div class="paper" style="max-width:940px;margin:auto" data-reactroot=""><div style="padding:16px;text-align:center;font-size:24px;font-weight:bold">面向对象程序设计2022-2023秋冬习题集5</div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">开始时间</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="2022/12/09 24:50:00">2022/12/09 24:50:00</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">结束时间</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="2023/01/31 02:50:00">2023/01/31 02:50:00</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">答题时长</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="76440分钟">76440分钟</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">答卷类型</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="标准答案">标准答案</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">总分</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="70">70</span></div><hr/><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">填空题</span><span>得分：暂无</span><span style="margin-left:20px">总分：32</span></div><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-1</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+class INCREMENT 
+{
+public:
+   INCREMENT( int v = 0, int i = 1 ); 
+   void addIncrement() 
+   { 
+      v += increment; 
+   } 
+   void print() const; 
+   int get() const
+   {
+       return v;
+   }
+private:
+   int v;
+   const int increment; 
+}; 
+
+INCREMENT::INCREMENT( int v, int i ) : v( v ), increment( i )    
+{ 
+} 
+
+void INCREMENT::print() const
+{
+   cout &lt;&lt; v &lt;&lt; endl;
+} 
+int main()
+{
+   INCREMENT value( 1, 2);
+   value.print();
+
+   for ( int j = 1; j &lt;= 2; j++ ) 
+   {
+      value.addIncrement();
+      value.print();
+   } 
+   return 0;
+}
+</code></pre>
+<p>One for each line:</p>
+<p>line 1:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 2:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="3" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 3:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="5" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> </p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-2</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+class TEST
+{ 
+    int num; 
+public:
+    TEST( int num=0); 
+    void increment( ) ;
+    ~TEST( );
+}; 
+TEST::TEST(int num) : num(num)
+{
+    cout &lt;&lt; num  &lt;&lt; endl; 
+} 
+void TEST::increment() 
+{
+    num++;
+}
+TEST::~TEST( )
+{
+    cout &lt;&lt; num  &lt;&lt; endl;
+} 
+int main( ) 
+{
+    TEST array[2]; 
+    array[0].increment();
+    array[1].increment();
+    return 0;
+}
+</code></pre>
+<p>One for each line:</p>
+<p>line 1:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 2:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 3:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 4:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-3</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+class Base{
+protected:
+    int x;
+public:
+    Base(int b=0): x(b) { }
+    virtual void display() const {cout &lt;&lt; x &lt;&lt; endl;}
+};
+class Derived: public Base{
+    int y;
+public:
+    Derived(int d=0): y(d) { }
+    void display() {cout &lt;&lt; x &lt;&lt; &quot;,&quot; &lt;&lt; y &lt;&lt; endl;}
+};
+int main()
+{
+  Base b(1);
+  Derived d(2);
+  Base *p = &amp;d;
+  b.display();
+  d.display();
+  p-&gt;display();
+  return 0;
+}
+</code></pre>
+<p>One for each line:</p>
+<p>line 1:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>  </br><br>line 2:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0,2" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>  </br><br>line 3:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-4</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+enum NOTE { middleC, Csharp, Cflat }; 
+class Instrument {
+public:
+  virtual void play(NOTE) const = 0;
+  virtual char* what() const = 0;
+  virtual void adjust(int) = 0;
+};
+
+class Wind : public Instrument {
+public:
+  void play(NOTE) const {
+    cout &lt;&lt; 1 &lt;&lt; endl;
+  }
+  char* what() const { return &quot;Wind&quot;; }
+  void adjust(int) {}
+};
+
+class Percussion : public Instrument {
+public:
+  void play(NOTE) const {
+    cout &lt;&lt; 2 &lt;&lt; endl;
+  }
+  char* what() const { return &quot;Percussion&quot;; }
+  void adjust(int) {}
+};
+
+class Stringed : public Instrument {
+public:
+  void play(NOTE) const {
+    cout &lt;&lt; 3 &lt;&lt; endl;
+  }
+  char* what() const { return &quot;Stringed&quot;; }
+  void adjust(int) {}
+};
+
+class Brass : public Wind {
+public:
+  void play(NOTE) const {
+    cout &lt;&lt; 11 &lt;&lt; endl;
+  }
+  char* what() const { return &quot;Brass&quot;; }
+};
+
+class Woodwind : public Wind {
+public:
+  void play(NOTE) const {
+    cout &lt;&lt; 12 &lt;&lt; endl;
+  }
+  char* what() const { return &quot;Woodwind&quot;; }
+};
+
+void tune(Instrument&amp; i) {
+  i.play(middleC);
+}
+
+void f(Instrument&amp; i) { i.adjust(1); }
+
+int main() {
+  Wind flute;
+  Percussion drum;
+  Stringed violin;
+  Brass flugelhorn;
+  Woodwind recorder;
+  tune(flute);
+  tune(drum);
+  tune(violin);
+  tune(flugelhorn);
+  tune(recorder);
+  f(flugelhorn);
+  return 0;
+}
+</code></pre>
+<p>One for each line:</p>
+<p>line 1:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 2:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="2" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 3:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="3" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 4:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="11" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br>line 5:<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="12" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-5</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+class A{   
+public:
+    A&amp; operator=(const A&amp; r)
+    {
+        cout &lt;&lt; 1 &lt;&lt; endl;
+        return *this;
+    }
+};
+class B{   
+public:
+    B&amp; operator=(const B&amp; r)
+    {
+        cout &lt;&lt; 2 &lt;&lt; endl;
+        return *this;
+    }
+};
+class C{
+private:
+    B b;
+    A a;
+    int c;
+};
+
+int main()
+{
+    C m,n;
+    m = n;
+    return 0;
+}
+</code></pre>
+<p>One for each line:</p>
+<p><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="2" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-6</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include &lt;iostream&gt;  
+using namespace std;
+class MYCLASS{
+public:
+    MYCLASS(int x):val(x){}
+    void print() const
+    {
+        cout &lt;&lt; val &lt;&lt; endl;
+    }
+    void print()
+    {
+        cout &lt;&lt; val &lt;&lt; endl;
+    }
+private:
+    int val;
+}; 
+int main()
+{
+   MYCLASS ob1(1);
+   const MYCLASS ob2(2);
+   ob2.print();
+   ob1.print();
+   return 0;
+}
+</code></pre>
+<p>One for each line.</br><br>line 1: <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="2" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>  </br>line 2: <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-7</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class counter{
+private:
+    int value;
+public: 
+    counter():value(0) {}
+    counter&amp; operator++();  
+    int operator++(int);    
+    void reset()
+    {
+        value = 0;
+    }
+    operator int() const  
+    {
+        return value;
+    }    
+};
+
+counter&amp; counter::operator++()    
+{     
+    if (3 == value)
+          value = 0;
+    else
+        value += 1;
+    return *this;
+}
+
+int counter::operator++(int) 
+{        
+    int t = value;
+    if (3 == value)
+         value = 0;
+    else
+        value += 1;
+    return t;
+}
+
+int main()
+{
+    counter a;   
+    while (++a)  
+         cout &lt;&lt; &quot;***\n&quot;;
+    cout &lt;&lt; a &lt;&lt; endl;
+    while (a++)  
+         cout &lt;&lt; &quot;***\n&quot;;
+    cout &lt;&lt; a &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>One for each line:</br><br><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="***" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="***" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="***" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-8</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+int&amp; f(int &amp;i )
+{
+    i += 10;
+    return i ;
+}
+int main()
+{
+    int k = 0;
+    int&amp; m = f(k);
+    cout &lt;&lt; k &lt;&lt; &quot;#&quot;;
+    f(m)++;
+    cout &lt;&lt; k &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p> <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="10#21" disabled=""/><span style="margin-left:4px;color:gray">(2分)</span></span> </p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-9</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+class Sample{
+    friend long fun(Sample s);  
+public:
+    Sample(long a)
+    { 
+        x = a;
+    }    
+private:
+    long x; 
+};     
+long fun(Sample s)
+{
+    if (s.x &lt; 2) return 1; 
+    return s.x * fun(Sample(s.x-1));  
+}
+int main()
+{
+    int sum = 0; 
+    for(int i=0;i&lt;6;i++)
+    {
+       sum += fun(Sample(i));
+    }
+    cout &lt;&lt; sum;
+    return 0;
+}
+</code></pre>
+<p><span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="154" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">4-10</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>write the output of the code below.</p>
+<p>1.the output at //1 is <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="1" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>  </p>
+<p>2.the output at //2 is <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="2" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> </p>
+<p>3.the output at //3 is <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="7" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> </p>
+<p>4.the output at //4 is <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> </p>
+<p>5.the output at //5 is <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std ;
+
+class Testing
+{
+private:
+    string words; 
+    int number ;
+public:
+    Testing(const string &amp; s = &quot;Testing&quot;)
+    {
+        words = s ;
+        number = words.length();
+        if (words.compare(&quot;Testing&quot;)==0)
+            cout &lt;&lt; 1;
+        else if (words.compare(&quot;Heap1&quot;)==0)
+            cout &lt;&lt; 2;
+        else
+            cout &lt;&lt; 3;
+    }
+    ~Testing()
+    {
+        cout &lt;&lt; 0;
+    }
+    void show() const
+    {
+        cout &lt;&lt; number;
+    }
+};
+int main()
+{
+    Testing *pc1 , *pc2;
+    pc1 = new Testing ;          //1
+    pc2 = new Testing(&quot;Heap1&quot;);  //2
+    pc1-&gt;show();   //3
+    delete pc1 ;   //4
+    delete pc2 ;   //5
+    return 0;
+}
+</code></pre>
+</div></div></div></div></div><hr/><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">程序填空题</span><span>得分：暂无</span><span style="margin-left:20px">总分：38</span></div><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">5-1</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>Run the following program, Enter: 1, the output is:  55 34 21 13 8 5 3 2 1 1</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+enum ERROR{UnderFlow,OverFlow};
+template&lt;typename T&gt;
+class StackTemplate {
+    enum { ssize = 100 };
+    T stack[ssize];
+    int top;
+public:
+    StackTemplate() : top(0) {}
+    void push(const T&amp; i) {
+        if (top &gt;= ssize)  <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="throw OverFlow" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;
+        stack[top++] = i;
+    }
+    T pop() {
+        if (<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="top &lt;= 0" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>) throw UnderFlow;
+        return <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="stack[--top]" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;
+    }
+    int size() const
+    { return top; }
+};
+int fibonacci(int n);
+
+int main() {
+    <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="try" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> {
+        <span data-reactroot=""><input type="text" style="max-width:none;width:21.599999999999998ch;max-height:500px" value="StackTemplate&lt;int&gt;" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> is;
+        for(int i = 0; i &lt; 20; i++)
+            is.push(fibonacci(i));
+        for(int k = 0; k &lt; 20; k++)
+            cout &lt;&lt; is.pop() &lt;&lt; &quot;\t&quot;;
+    }
+    catch( ERROR e ) {
+        switch(<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="e" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>)
+        {
+        case OverFlow:
+            exit;
+        case UnderFlow:
+            exit;
+        }
+    }
+    catch(...)
+    {
+        exit;
+    }
+    return 0;
+}
+
+int fibonacci(int n) 
+{
+    <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="const" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> int sz = 100;
+    int i;
+    static int f[sz]; 
+    if (n &gt;= sz) <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="throw OverFlow" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;
+       f[0] = f[1] = 1;
+    for(i = 0; i &lt; sz; i++)
+        if(f[i] == 0) break;
+    while(i &lt;= n) {
+        <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="f[i]" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> = f[i-1] + f[i-2];
+        i++;
+    }
+    return <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="f[n]" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;
+}
+</code></pre>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">5-2</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>Run the following program, the output is:   B::f()</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class A{ 
+public: 
+    <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="virtual void f()" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>{ cout&lt;&lt;&quot;A::f()\n&quot;; } 
+ }; 
+class B:public A{ 
+ public:
+      void f() {cout&lt;&lt;&quot;B::f()\n&quot;; } 
+ }; 
+int main() 
+{ 
+   B b;
+   A &amp;p <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="=b" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;
+   <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="p." disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>f(); 
+   return 0;
+}
+</code></pre>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">5-3</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><pre><code>#include &lt;iostream&gt;
+using namespace std;
+class IndexError{};
+template <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="&lt;typename T&gt;" disabled=""/><span style="margin-left:4px;color:gray">(2分)</span></span>
+class ARRAY
+{
+    size_t m_size;
+    T *m_ptr;
+public:
+    ARRAY(size_t size) : m_size(size)
+    {    
+        m_ptr = new T[size];    
+        memset(m_ptr, 0, size*sizeof(int));
+    }
+    ~ARRAY()
+    {    
+        delete[] m_ptr;    
+    }
+    T&amp; at(int index);
+};
+
+template &lt;typename T&gt;
+<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="T&amp;ARRAY&lt;T&gt;" disabled=""/><span style="margin-left:4px;color:gray">(2分)</span></span>::at(int index)  
+{
+    if(index&lt;0||<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="index&gt;=m_size" disabled=""/><span style="margin-left:4px;color:gray">(2分)</span></span>)  
+    {
+        <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="throw" disabled=""/><span style="margin-left:4px;color:gray">(2分)</span></span> IndexError();  
+    }
+    return m_ptr[index];
+}
+
+int main()
+{
+    ARRAY&lt;int&gt; a(50);
+    int i;
+    cin &gt;&gt; i;
+    <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="try" disabled=""/><span style="margin-left:4px;color:gray">(2分)</span></span>  
+    {
+        for(int j=0;j&lt;i;j++)
+            a.at(i) = j;
+    }
+    catch(IndexError e)
+    {
+        return 0;
+    }
+    return 0;
+}
+</code></pre>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">5-4</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>Run the following program, Enter: 1, the output is:<br>S1 == S2<br>                                           HfLLO<br>                                           HFLLO</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+class ERROR{};
+class STRING
+{
+   char *m_pStr;
+   int m_len;
+public:
+   STRING(char *str=NULL){
+      if (str != NULL) {   
+           m_len = strlen(str);
+         m_pStr = <span data-reactroot=""><input type="text" style="max-width:none;width:20.4ch;max-height:500px" value="new char[m_len+1]" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;  
+         strcpy(<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="m_pStr,str" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>);   
+      }
+      else {
+         m_len = 0;
+         m_pStr = NULL;
+      }
+   }  
+   <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="STRING&amp;" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> operator=(char *str)  
+   {
+      <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="delete[]" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> m_pStr ;   
+      m_len = strlen(str)+1;
+      m_pStr = new char[m_len]; 
+      strcpy(<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="m_pStr,str" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>); 
+      return <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="*this" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;  
+   }
+ 
+   bool operator==(STRING str) <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="const" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>
+   {
+      return (<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="strcmp" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>(m_pStr, str.m_pStr)== 0);  
+   }
+   char operator [] (int i) <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="const" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>
+   {
+      if (i&lt;m_len &amp;&amp; i&gt;=0) return m_pStr[i];
+      throw <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="ERROR()" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;
+   }
+   char&amp; operator[](int i) <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>
+   { 
+       if (i&lt;m_len &amp;&amp; i&gt;=0) return m_pStr[i];
+       ERROR e;
+       <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="throw e" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>;  
+   }
+  <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="friend" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span> ostream&amp; operator&lt;&lt;(ostream&amp; out ,STRING s); 
+};
+ostream&amp; operator&lt;&lt;(ostream&amp; out ,STRING s)     
+{
+   out &lt;&lt; s.m_pStr;
+   return out;  
+}
+
+int main()
+{
+   STRING s1,s2(&quot;HeLLO&quot;);
+   int i;
+   cin &gt;&gt; i;
+   s1 = s2;
+   if (s1 == s2) cout &lt;&lt; &quot;S1 == S2\n&quot;;
+   s1[1] = s1[1] + 1;
+   cout &lt;&lt; s1 &lt;&lt; endl;;
+
+   <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="try" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>{  
+       if(s1[i]&gt;=&#39;a&#39; &amp;&amp; s1[i]&lt;=&#39;z&#39;) s1[i] =  s1[i] - 32;
+       cout &lt;&lt; s1 &lt;&lt; endl;
+   }
+   <span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="catch" disabled=""/><span style="margin-left:4px;color:gray">(1分)</span></span>(   ERROR&amp; e)  
+   {
+      cout &lt;&lt; &quot;upperbound overflow&quot;;
+   }
+   return 0;
+}
+</code></pre>
+</div></div></div></div></div><hr/></div></div>
+
+</body>
+</html>

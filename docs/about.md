@@ -7,18 +7,11 @@
 ![mon amour](./assets/img/illcomebackonedayfrance.jpeg)
 
 > un jour je serai de retour pres det toi "有一天我会回到你身边"
+> 是极乐迪斯科！
 
-#### 很帅的鬼
-
-![mon_amour](./assets/img/mon_amour.jpeg)
 
 ### 2. 在月牙楼涂鸦
 
-#### 嘿嘿！这下流芳百世了
-
-![mon amour](./assets/img/phantom.png)
-
-> Phantom of Information Security 信安魅影 出击
 
 ![mon amour](./assets/img/anja.jpeg)
 
@@ -27,7 +20,7 @@
 ![mon amour](./assets/img/ghost.jpeg)
 > 多少有点阴间了 0 0
 
-### Tatanic the Musical
+### 3. Musicals![20240815140956](https://raw.githubusercontent.com/AnyaReese/PicGooo/main/images/20240815140956.png)
 
 虽然周末一直在睡觉呜呜呜但是看了泰坦尼克号巡演！我爆哭😭
 

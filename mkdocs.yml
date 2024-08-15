@@ -154,8 +154,10 @@ nav:
     - 备忘: Misc/备忘.md
 
   - Me the Weirdo being Weird:
-  
-    - My bucket List:
-      - Bucket List: about.md
+    - BUcket List:
+        - My bucket List: bucket_list/README.md
+        - record: about.md
+    - Books: Misc/books/books.md
+    - Painting: Misc/pics/pics.md
 
 

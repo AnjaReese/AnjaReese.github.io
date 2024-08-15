@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>面向对象程序设计2022-2023秋冬习题集1</title>
+  <style>.paper {
+  margin: 0;
+  font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--text-normal, hsl(0, 0%, 25%));
+}
+.paper *,
+.paper *::before,
+.paper *::after {
+  box-sizing: border-box;
+}
+.paper pre,
+.paper code,
+.paper kbd,
+.paper samp {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+  font-size: 12px;
+}
+.paper pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+.paper label {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.paper hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--scroll-thumb, hsl(0, 0%, 85%));
+  margin: 0;
+}
+.paper .result table {
+  width: 100%;
+}
+.paper .result th,
+.paper .result td {
+  border: 1px solid var(--border-all, hsla(0, 0%, 0%, 0.06));
+  text-align: center;
+}
+.paper .result .box {
+  border: 1px solid var(--border-all, hsla(0, 0%, 0%, 0.06));
+  padding: 8px;
+  color: var(--text-normal, hsl(0, 0%, 25%));
+}
+/* stylelint-disable */
+.ques-view, .rendered-markdown {
+  line-height: 1.5;
+}
+.ques-view p, .rendered-markdown p {
+  margin: 0.5em 0;
+}
+.ques-view h1, .rendered-markdown h1, .ques-view h2, .rendered-markdown h2, .ques-view h3, .rendered-markdown h3, .ques-view h4, .rendered-markdown h4, .ques-view h5, .rendered-markdown h5, .ques-view h6, .rendered-markdown h6 {
+  margin: 0.8em 0;
+}
+.ques-view img, .rendered-markdown img {
+  max-width: 100%;
+}
+.ques-view .ques-list, .rendered-markdown .ques-list {
+  padding-left: 3.125rem;
+}
+.ques-view .ques-list li, .rendered-markdown .ques-list li {
+  position: relative;
+  list-style-type: upper-alpha;
+}
+.ques-view .ques-list input, .rendered-markdown .ques-list input {
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  margin-top: -0.4375rem;
+}
+.ques-view textarea, .rendered-markdown textarea {
+  border-radius: 0.125rem;
+  width: 100%;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  min-height: 6.25rem;
+}
+.ques-view code, .rendered-markdown code {
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-radius: 0.1875rem;
+  border: 1px solid var(--border-all);
+  color: #e74c3c;
+  margin: 0 0.125rem;
+}
+.ques-view pre, .rendered-markdown pre {
+  padding: 0.375rem 0.75rem;
+  background: var(--bg-light);
+  border: 1px solid var(--border-all);
+  border-radius: 0.1875rem;
+  word-break: break-all;
+}
+.ques-view pre code, .rendered-markdown pre code {
+  background: none;
+  border: none;
+  color: var(--text-normal);
+  margin: 0;
+}
+.ques-view hr, .rendered-markdown hr {
+  border: none;
+  border-top: 1px solid var(--border-all);
+}
+.ques-view blockquote, .rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 0.125rem 0.875rem;
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-left: 4px solid var(--border-all);
+}
+.ques-view table, .rendered-markdown table {
+  margin: 0 auto;
+}
+.ques-view table th, .rendered-markdown table th, .ques-view table td, .rendered-markdown table td {
+  border: 1px solid var(--border-all);
+  padding: 0.125rem 0.25rem;
+  font-size: 0.75rem;
+}
+.ques-view .ques-score, .rendered-markdown .ques-score {
+  color: var(--text-light);
+  user-select: none;
+}
+.rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 0.125rem 0.875rem;
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-left: 4px solid var(--border-all);
+}
+.rendered-markdown blockquote p {
+  margin-bottom: 0;
+}
+.rendered-markdown table td, .rendered-markdown table th {
+  border: 1px solid var(--border-all);
+  padding: 0.3125rem;
+}
+.rendered-markdown p:first-child {
+  margin: 0;
+}
+.katex-mathml {
+  display: none;
+}
+.code {
+  font-family: var(--font-mono);
+}
+</style>
+  <link rel="stylesheet" href="https://static.pintia.cn/assets/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+<div><div class="paper" style="max-width:940px;margin:auto" data-reactroot=""><div style="padding:16px;text-align:center;font-size:24px;font-weight:bold">面向对象程序设计2022-2023秋冬习题集1</div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">开始时间</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="2022/12/09 24:42:00">2022/12/09 24:42:00</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">结束时间</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="2023/01/31 23:59:00">2023/01/31 23:59:00</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">答题时长</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="77717分钟">77717分钟</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">答卷类型</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="标准答案">标准答案</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">总分</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="45">45</span></div><hr/><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">判断题</span><span>得分：暂无</span><span style="margin-left:20px">总分：5</span></div><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">1-1</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>对单目运算符重载为友元函数时，可以说明一个形参。而重载为成员函数时，不能显式说明形参。  </p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1600894039057231872" value="TRUE" disabled="" checked=""/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1600894039057231872" value="FALSE" disabled=""/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">1-2</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>虚函数是用virtual 关键字说明的成员函数。  </p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1600894039057231873" value="TRUE" disabled="" checked=""/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1600894039057231873" value="FALSE" disabled=""/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">1-3</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>使用提取符(&lt;&lt;)可以输出各种基本数据类型的变量的值，也可以输出指针值。  </p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1600894039057231874" value="TRUE" disabled="" checked=""/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1600894039057231874" value="FALSE" disabled=""/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">1-4</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>因为静态成员函数不能是虚函数，所以它们不能实现多态。  </p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1600894039057231875" value="TRUE" disabled="" checked=""/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1600894039057231875" value="FALSE" disabled=""/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">1-5</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>重载operator+时，返回值的类型应当与形参类型一致。<br>比如以下程序中，operator+的返回值类型有错：</p>
+<p>class A {</p>
+<pre><code>int x;
+</code></pre>
+<p> public:</p>
+<pre><code> A(int t=0):x(t){     }
+
+    int operator+(const A&amp; a1){ return x+a1.x;  }
+</code></pre>
+<p>};
+  </p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1600894039057231876" value="TRUE" disabled=""/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1600894039057231876" value="FALSE" disabled="" checked=""/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><hr/><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">单选题</span><span>得分：暂无</span><span style="margin-left:20px">总分：20</span></div><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-1</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>对象之间的相互作用和通信是通过消息。（ ）不是消息的组成部分。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231877" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>接受消息的对象</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231877" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>要执行的函数的名字</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231877" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>要执行的函数的内部结构</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231877" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>函数需要的参数</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-2</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>（ ）不是面向对象程序设计的主要特征。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231878" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>封装</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231878" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>继承</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231878" value="C" disabled=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>多态</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231878" value="D" disabled="" checked=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>结构</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-3</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>对定义重载函数的下列要求中，（ ）是错误的。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231879" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>要求参数的个数不同</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231879" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>要求参数中至少有一个类型不同</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231879" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>要求函数的返回值不同</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231879" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>要求参数个数相同时，参数类型不同</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-4</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>关于动态绑定的下列描述中，（ ）是错误的。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231880" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>动态绑定是以虚函数为基础的</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231880" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>动态绑定在运行时确定所调用的函数代码</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231880" value="C" disabled=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>动态绑定调用函数操作是通过指向对象的指针或对象引用来实现的</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231880" value="D" disabled="" checked=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>动态绑定是在编译时确定操作函数的</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-5</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>关于虚函数的描述中，（ ）是正确的。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231881" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>虚函数是一个static 类型的成员函数</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231881" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>虚函数是一个非成员函数</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231881" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>基类中说明了虚函数后，派生类中与其对应的函数可不必说明为虚函数</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231881" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>派生类的虚函数与基类的虚函数具有不同的参数个数和类型</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-6</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>下列叙述中，不正确的是（ ）。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231882" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>构造函数必须和类同名</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231882" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>构造函数和析构函数都没有返回值</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231882" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>析构函数中不能加代码</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231882" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>析构函数不能带参数</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-7</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>在下面类声明中，关于生成对象不正确的是（ ）。<br>class point<br>{ public:<br>         int x;<br>         int y;<br>         point(int a,int b)   {x=a;y=b;}<br>};</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231883" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>point p(10,2);</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231883" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>point *p=new    point(1,2);</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231883" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>point *p=new point[2];</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231883" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>point *p[2]={new point(1,2), new  point(3,4)};</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-8</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>下列运算符中，（ ）运算符不能重载。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231884" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>＆＆</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231884" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>[ ]</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231884" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>::</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231884" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>&lt;&lt;</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-9</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>关于纯虚函数和抽象类的描述中，（ ）是错误的。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231885" value="A" disabled=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>纯虚函数是一种特殊的虚函数，它没有具体的实现</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231885" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>抽象类是指具有纯虚函数的类</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231885" value="C" disabled="" checked=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>一个基类中说明有纯虚函数，该基类的派生类一定不再是抽象类</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231885" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>抽象类只能作为基类来使用，其纯虚函数的实现由派生类给出</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">2-10</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>在下列关键字中,用以说明类中公有成员的是（ ）。</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1600894039057231886" value="A" disabled="" checked=""/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>public</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1600894039057231886" value="B" disabled=""/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>private</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1600894039057231886" value="C" disabled=""/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>protected</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1600894039057231886" value="D" disabled=""/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>friend</p>
+</div></div></div></label></div></div></div></div></div><hr/><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">程序填空题</span><span>得分：暂无</span><span style="margin-left:20px">总分：20</span></div><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">5-1</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>打印“Hello World!”，占一行。</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    cout&lt;&lt;&quot;<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="Hello World!" disabled=""/><span style="margin-left:4px;color:gray">(10分)</span></span>&quot;&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+</div></div></div></div></div><hr/><div style="padding-bottom:8px;margin-top:12px"><div style="display:flex"><div style="margin-right:12px;white-space:nowrap">5-2</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>阅读下面的程序，完成其中复制构造函数的代码。</p>
+<pre><code class="language-C++">#include &lt;iostream&gt;
+using namespace std;
+class CAT
+{     public:
+           CAT();
+           CAT(const CAT&amp;);
+          ~CAT();
+          int GetAge() const { return *itsAge; }
+          void SetAge(int age){ *itsAge=age; }
+      protected:
+          int* itsAge;
+};
+CAT::CAT()
+{    itsAge=new int;
+     *itsAge =5;
+}
+CAT::CAT(const CAT&amp; c)
+{
+<span data-reactroot=""><input type="text" style="max-width:none;width:19.2ch;max-height:500px" value="itsAge = new int" disabled=""/><span style="margin-left:4px;color:gray">(5分)</span></span>; 
+<span data-reactroot=""><input type="text" style="max-width:none;width:24ch;max-height:500px" value="*itsAge= *(c.itsAge)" disabled=""/><span style="margin-left:4px;color:gray">(5分)</span></span>; 
+}
+CAT::~CAT()
+{     delete itsAge;   }
+</code></pre>
+</div></div></div></div></div><hr/></div></div>
+
+</body>
+</html>

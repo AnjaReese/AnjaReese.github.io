@@ -1,0 +1,52 @@
+:root {
+  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+  --md-code-font: "JetBrains Mono";
+}
+
+
+@media screen and (min-width: 960px) {
+  /* body {
+    zoom: 1.1;
+  } */
+  html {
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media screen and (min-width: 125em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+h1 {
+  counter-reset: h2;
+}
+h2 {
+  counter-reset: h3;
+}
+h3 {
+  counter-reset: h4;
+}
+h4 {
+  counter-reset: h5;
+}
+h5 {
+  counter-reset: h6;
+}
+
+.md-typeset h1, .md-typeset h2 {
+    font-weight: 600;
+}
+.md-typeset h3 {
+    font-weight: 500;
+}
+.md-typeset kbd {
+  padding: 0 0.5em;
+}

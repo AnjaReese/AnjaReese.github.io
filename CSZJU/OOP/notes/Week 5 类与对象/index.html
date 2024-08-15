@@ -1,0 +1,2152 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="idk">
+      
+      
+        <meta name="author" content="AnjaReese">
+      
+      
+        <link rel="canonical" href="https://anjareese.github.io/mymkdocs/CSZJU/OOP/notes/Week%205%20%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+      
+      
+        <link rel="prev" href="../Week%201%20-%20Week%204%20%EF%BC%9AC%2B%2B%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+      
+      
+        <link rel="next" href="../Week7%20%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B6%E4%BB%96%E6%80%A7%E8%B4%A8/">
+      
+      
+      <link rel="icon" href="../../../../assets/img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>类与对象 - Anya's Adventure</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/utils/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css">
+    
+      <link rel="stylesheet" href="../../../../css/tasklist.css">
+    
+      <link rel="stylesheet" href="../../../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../../../css/card.css">
+    
+      <link rel="stylesheet" href="../../../../css/flink.css">
+    
+      <link rel="stylesheet" href="../../../../css/changelog_extra.css">
+    
+      <link rel="stylesheet" href="../../../../css/counter.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="Anya&#39;s Adventure" class="md-header__button md-logo" aria-label="Anya's Adventure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anya's Adventure
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              类与对象
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07 19.07 3.5m-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13.51 1.67m-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87.4 1.31M19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35-2.53-2.2m4.33-2.7 1.15-2.77 2.2 2.54-3.35.23m1.15-4.96-1.14-2.78 3.34.24-2.2 2.54M9.63 18.93l2.77 1.15-2.53 2.19-.24-3.34Z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10Z"/></svg>
+          </a>
+      </div>
+    </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  Hi There
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../FDS/Notes/0.Overview/" class="md-tabs__link">
+          
+  
+    
+  
+  ZJU Course
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../CSCourse/CS61B/CS61B%201/" class="md-tabs__link">
+          
+  
+    
+  
+  CS Courses
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Misc/%E5%A4%87%E5%BF%98/" class="md-tabs__link">
+          
+  
+    
+  
+  备忘
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../bucket_list/" class="md-tabs__link">
+          
+  
+    
+  
+  Me the Weirdo being Weird
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+  <script src="../../../../js/scheme.js" type="text/javascript"></script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Anya&#39;s Adventure" class="md-nav__button md-logo" aria-label="Anya's Adventure" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Anya's Adventure
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../.." class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Hi There
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ZJU Course
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ZJU Course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../FDS/Notes/0.Overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    FDS Class Notes
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OOP
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            OOP
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week%201%20-%20Week%204%20%EF%BC%9AC%2B%2B%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    类与对象
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    类与对象
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 结构与类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 类和对象的概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 类的定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 类的定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 定义格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 类成员访问控制权限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 类成员访问控制权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 public 公有类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 private 私有类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 protected 保护类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 成员函数实现方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 对象的创建与使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 对象的创建与使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 对象成员的访问
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 构造函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 构造函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 构造函数的定义：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.2 默认构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.3 构造函数的重载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.4 带默认参数的构造函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 析构函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 构造函数和析构函数的调用顺序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 对象数组与对象指针
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 对象数组与对象指针">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#381" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.1 对象数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#382" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.2 对象指针
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#383-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.3 this 指针
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9 向函数传递对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9 向函数传递对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#391" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.1 使用对象作为函数参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#392" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.2 使用对象指针作为函数参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#393" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.3 使用对象引用作为函数参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#394" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.4 三种传递方式比较
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10 对象的赋值和复制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10 对象的赋值和复制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3101" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10.1 对象赋值的一般形式为：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10.2 拷贝构造函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11 对象的组合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week7%20%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%85%B6%E4%BB%96%E6%80%A7%E8%B4%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    类与对象2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%A8%A1%E6%9D%BF%E4%BB%A5%E5%8F%8A%20STL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    模板及 STL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../SYS2/notes/Week1_Overview%20and%20ISA%20Principles/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    SYS2
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../CSCourse/CS61B/CS61B%201/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CS Courses
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../Misc/%E5%A4%87%E5%BF%98/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    备忘
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../bucket_list/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Me the Weirdo being Weird
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 结构与类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 类和对象的概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 类的定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 类的定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 定义格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 类成员访问控制权限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 类成员访问控制权限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 public 公有类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 private 私有类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-protected" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 protected 保护类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 成员函数实现方式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 对象的创建与使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 对象的创建与使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 对象成员的访问
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 构造函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 构造函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 构造函数的定义：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.2 默认构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.3 构造函数的重载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.4 带默认参数的构造函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 析构函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 构造函数和析构函数的调用顺序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 对象数组与对象指针
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.8 对象数组与对象指针">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#381" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.1 对象数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#382" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.2 对象指针
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#383-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8.3 this 指针
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9 向函数传递对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.9 向函数传递对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#391" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.1 使用对象作为函数参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#392" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.2 使用对象指针作为函数参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#393" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.3 使用对象引用作为函数参数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#394" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9.4 三种传递方式比较
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10 对象的赋值和复制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.10 对象的赋值和复制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3101" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10.1 对象赋值的一般形式为：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3102" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10.2 拷贝构造函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.11 对象的组合
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>类与对象</h1>
+
+<h2 id="1">1 结构与类<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>结构是 C 语言中的一种自定义的数据类型；</li>
+<li>C++ 对结构进行了扩充：在结构中不仅有不同类型的数据，还可以有函 数和访问控制；</li>
+<li>结构中的数据和函数都是结构的成员，分别称为数据成员和成员函数；</li>
+<li>扩充后的结构就是类。</li>
+</ol>
+<ul>
+<li>结构中的<strong>私有成员只能为该结构的其他成员所访</strong>问，其他不行</li>
+<li>C++ 规定：默认情况下，结构的成员是公有的，谁都可以访问</li>
+<li>封装规定：<strong>数据成员一般为私有</strong>。</li>
+<li>C++ 通过引入类解决这一问题：把 struct 变成 class，结构即成为类。</li>
+</ul>
+<h2 id="2">2 类和对象的概念<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>类（class）是面向对象系统中最基本的组成元素，是一种自定义数据类型。在C++中，类是一些具有相同属性和行为的对象的抽象。
+对象是某个特定类所描述的实例。现实世界中的任何一种事物都可以看成一个对象(Object)，即万物皆对象。</p>
+</blockquote>
+<h2 id="3">3 类的定义<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 定义格式<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">类名</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">数据成员或成员函数</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">protected</span><span class="o">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">数据成员或成员函数</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">数据成员或成员函数</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">};</span>
+</code></pre></div>
+<h3 id="32">3.2 类成员访问控制权限<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>默认情况下为 public</p>
+<h4 id="321-public">3.2.1 public 公有类型<a class="headerlink" href="#321-public" title="Permanent link">&para;</a></h4>
+<p>public 声明成员为公有成员。定义了类的外部接口，对外是完全公 开的，即提供了外部对象与类对象相互之间交互的接口。在类外只 能访问该类的公有成员。公有成员通常都是成员函数。</p>
+<h4 id="322-private">3.2.2 private 私有类型<a class="headerlink" href="#322-private" title="Permanent link">&para;</a></h4>
+<p>private 声明成员为私有成员。具有这个访问控制级别的成员对类外是完全保密的， 只能被它本类中的成员函数或该类的友元函数访问。其他来自类外部任何访问都是非法的。</p>
+<p>私有类型的访问方法 sample: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Human</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">stature</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">SetStature</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="n">stature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">SetWeight</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">GetStature</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Your stature is:&quot;</span><span class="o">&lt;&lt;</span><span class="n">stature</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">GetWeight</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Your weight is:&quot;</span><span class="o">&lt;&lt;</span><span class="n">weight</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">};</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="n">Human</span><span class="w"> </span><span class="n">Tom</span><span class="p">;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="c1">// Tom.weight = 80;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="c1">// Tom.stature = 185;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">    </span><span class="n">Tom</span><span class="p">.</span><span class="n">SetStature</span><span class="p">(</span><span class="mi">185</span><span class="p">);</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="n">Tom</span><span class="p">.</span><span class="n">SetWeight</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="n">Tom</span><span class="p">.</span><span class="n">GetStature</span><span class="p">();</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="n">Tom</span><span class="p">.</span><span class="n">GetWeight</span><span class="p">();</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="323-protected">3.2.3 protected 保护类型<a class="headerlink" href="#323-protected" title="Permanent link">&para;</a></h4>
+<p>protected 声明成员为保护成员。具有这个访问控制级别的成员，外界是无法直接访问的。它只能被它所在类及从该类派生的子类的成员函数及友元函数访问。 保护成员和私有成员的性质相似，其差别在继承过程中对产生的新类影响不同。</p>
+<h3 id="33">3.3 成员函数实现方式<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在类中进行<strong>函数原型说明</strong>，而函数体则在类外进行定义。
+   采用这种方式定义类函数时，必须用作用域符 “::” 表明该函数所属的类。 
+   <code>cpp
+   void Clock::setTime(int newH,int newM,int newS) { 
+       hour = newH;
+       minute = newM;
+       second = newS;
+       }</code></li>
+<li>在类内直接进行定义。这种方式一般用在代码比较少的成员函数。被默认为内联函数。</li>
+</ol>
+<h3 id="34">3.4 对象的创建与使用<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>在 C++ 中，声明了类，只是定义了一种新的数据类型，只有当定义了类的对 象后，才是生成了这种数据类型的特定实体（实例）。对象是类的实际变量， 创建一个对象称为实例化一个对象或创建一个对象实例。</p>
+<ol>
+<li>必须先定义类，然后再定义类的对象。多个对象之间用逗号分隔。</li>
+<li>声明了一个类就是声明了一种新的数据类型，它本身不能接收和 存储具体的值，只有定义了类的对象后，系统才为其对象分配存储空间。</li>
+<li>在声明类的同时定义的类对象是一种全局对象，它的生存期一直 到整个程序运行结束。</li>
+</ol>
+<h4 id="341">3.4.1 对象成员的访问<a class="headerlink" href="#341" title="Permanent link">&para;</a></h4>
+<ol>
+<li>通过对象名和成员运算符访问对象的成员
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span><span class="n">object_name</span><span class="p">.</span><span class="n">member</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w"> </span><span class="n">object_name</span><span class="p">.</span><span class="n">func</span><span class="p">(</span><span class="n">argvs</span><span class="p">)</span>
+</code></pre></div></li>
+</ol>
+<blockquote>
+<p>[!Note] 对象只能访问其 public 的成员</p>
+</blockquote>
+<ol start="2">
+<li>通过指向对象的指针访问对象中的成员</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span><span class="n">PtrToObj</span><span class="o">-&gt;</span><span class="n">member</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w"> </span><span class="n">PtrToObj</span><span class="o">-&gt;</span><span class="n">func</span><span class="p">(</span><span class="n">argvs</span><span class="p">)</span>
+</code></pre></div>
+<ol start="3">
+<li>通过对象的引用访问对象中的成员</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&amp;</span><span class="n">ReferenceName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ObjectName</span>
+</code></pre></div>
+<h3 id="35">3.5 构造函数<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>构造函数（Constructor）是一种特殊的成员函数，用来完成在声明对象的同时，对对象中的数据成员进行初始化。</p>
+</blockquote>
+<h4 id="351">3.5.1 构造函数的定义：<a class="headerlink" href="#351" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ClassName</span><span class="p">(</span><span class="n">argvs</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">ClassName</span><span class="o">::</span><span class="n">ClassName</span><span class="p">(</span><span class="n">argvs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="c1">// function body</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>构造函数的名称必须与类名<strong>相同</strong>。</li>
+<li>构造函数<strong>没有</strong>返回值类型，也不能指定为 void 。</li>
+<li>构造函数可以有任意个任意类型的参数。</li>
+<li>如果没有显式的定义构造函数，系统会自动生成一个<strong>默认的构造函数</strong>。 这个构造函数不含有参数，也不对数据成员进行初始化，只负责为对象分配存 储空间。</li>
+<li>如果显式的为类定义了构造函数，系统将不再为类提供默认构造函数。</li>
+<li>定义对象时，系统会自动调用构造函数。</li>
+<li>构造函数可以<strong>重载</strong>。</li>
+<li>构造函数一般被定义为<strong>公有访问权限</strong>。</li>
+</ol>
+<h4 id="352">3.5.2 默认构造函数<a class="headerlink" href="#352" title="Permanent link">&para;</a></h4>
+<p>如果类没有定义构造函数，系统会自动生成一个默认的构造函数。这个构 造函数不含有参数，也不会对数据成员进行初始化。默认构造函数的形式如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span><span class="n">BuildFuncName</span><span class="p">(){}</span>
+</code></pre></div>
+<p>此时要特别注意，数据成员的值是随机的。程序运行时容易出错。</p>
+<h4 id="353">3.5.3 构造函数的重载<a class="headerlink" href="#353" title="Permanent link">&para;</a></h4>
+<p>一个类可以定义多个构造函数，这些构造函数具有<strong>相同的名字</strong>，但参数的<strong>个数</strong>或参数的<strong>类型</strong>存在差别，这称为构造函数的重载。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Date</span><span class="o">::</span><span class="n">Date</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">year</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">2012</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">day</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">Date</span><span class="o">::</span><span class="n">Date</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">year</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="n">day</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="354">3.5.4 带默认参数的构造函数<a class="headerlink" href="#354" title="Permanent link">&para;</a></h4>
+<ol>
+<li>默认参数只能在原型声明中指定，不能在构造函数的定义中指定</li>
+<li>在构造函数原型声明中，所有给默认值的参数都必须在不给默认值的参数的右面。</li>
+<li>在对象定义时，若省略构造函数的某个参数的值，则其右面所有参数的值都必须 省略，而采用默认值。<ol>
+<li>构造函数带有默认参数时，在定义对象时要注意避免二义性。例如： <code>Date(int y=2012,int m=1,int d=1);</code> and <code>Date();</code></li>
+</ol>
+</li>
+</ol>
+<h3 id="36">3.6 析构函数<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<p>析构函数（Destructor） 与构造函数相反，当对象的生命期结束时，就会自动调用析构函数清除它所占用的内存空间。</p>
+<p>系统执行析构函数的四种情况：</p>
+<ol>
+<li>在一个函数中定义了一个对象，当这个函数被调用结束时，该对 象应该释放，在对象释放前会自动执行析构函数。</li>
+<li>具有 static 属性的对象在函数调 用结束时该对象<strong>并不释放</strong>，因此也不调用析构函数。只在 main 函数结束 或调用 exit 函数结束程序时，其生命期将结束，这时才调用析构函数。</li>
+<li>全局对象，在 main 函数结束时，其生命期将结束，这时才调用其 的析构函数。</li>
+<li>用 new 运算符动态地建立了一个对象，当用 delete 运算符释放该 对象时，调用该对象的析构函数。</li>
+</ol>
+<p>析构函数的定义格式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">ClassName</span><span class="p">();</span>
+</code></pre></div>
+<ol>
+<li>析构函数名是由 “~” 加类名组成，区别于构造函数。</li>
+<li>析构函数没有<strong>参数</strong>、没有<strong>返回值</strong>，而且<strong>不能重载</strong>。</li>
+<li>一个类<strong>有且仅有</strong>一个析构函数，且应为 <strong>public</strong> 。</li>
+<li>在对象的生命期结束前，由<strong>系统自动</strong>调用析构函数。</li>
+<li>如果没有定义析构函数，系统会自动生成一个默认的析构函数，这个析构函数不做任何事情。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">#include</span><span class="cpf">&lt;string&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Student</span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="n">Student</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">na</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nu</span><span class="p">);</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="o">~</span><span class="n">Student</span><span class="p">();</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Output</span><span class="p">();</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">};</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="n">Student</span><span class="o">::</span><span class="n">Student</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">na</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nu</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">na</span><span class="p">;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nu</span><span class="p">;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="p">}</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="n">Student</span><span class="o">::~</span><span class="n">Student</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destruct&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="37">3.7 构造函数和析构函数的调用顺序<a class="headerlink" href="#37" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>一般情况下，调用析构函数的次序正好与调用构造函数的次序相反，也就是最先被调用的构造函数，其对应的析构函数最后被调用，而最后被调用的构造函数，其对应的析构函数最先被调用。</p>
+</blockquote>
+<h3 id="38">3.8 对象数组与对象指针<a class="headerlink" href="#38" title="Permanent link">&para;</a></h3>
+<h4 id="381">3.8.1 对象数组<a class="headerlink" href="#381" title="Permanent link">&para;</a></h4>
+<p>对象数组的元素是对象，它不仅具有数据成员，而且也具有成员函数
+定义对象数组、使用对象数组的方法与基本数据类型相似。
+在执行对象数组说明语句时，系统不仅为对象数组分配内存空间，以存放数组中的每个对象，而且还会自动调用匹配的构造函数完成数组内每个对象的初始化工作。</p>
+<p><strong>声明</strong>对象数组的格式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w"> </span><span class="n">ClassName</span><span class="w"> </span><span class="n">ArryName</span><span class="p">[</span><span class="n">xx</span><span class="p">];</span>
+</code></pre></div>
+<p><strong>访问</strong>对象数组的格式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w"> </span><span class="n">ArrayName</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div>
+<p>访问对象数组元素的<strong>成员函数</strong>的格式：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w"> </span><span class="n">ArrayName</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">func</span><span class="p">(</span><span class="n">argvs</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Box</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">Box</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="o">=</span><span class="mi">15</span><span class="p">);</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">volume</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">height</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">length</span><span class="p">);</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="p">};</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="n">Box</span><span class="o">::</span><span class="n">Box</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="o">:</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="n">height</span><span class="p">(</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="p">(</span><span class="n">w</span><span class="p">),</span><span class="w"> </span><span class="n">length</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="p">{}</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="n">Box</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">        </span><span class="n">Box</span><span class="p">(),</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">        </span><span class="n">Box</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">        </span><span class="n">Box</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">);</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">    </span><span class="p">};</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;volume of a[0] is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">volume</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;volume of a[1] is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">volume</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;volume of a[2] is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">volume</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>[!Note] 初始化列表</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Box</span><span class="o">::</span><span class="n">Box</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="o">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">height</span><span class="p">(</span><span class="n">h</span><span class="p">),</span><span class="w"> </span><span class="n">width</span><span class="p">(</span><span class="n">w</span><span class="p">),</span><span class="w"> </span><span class="n">length</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">{}</span>
+</code></pre></div>
+<p>成员初始化列表会保留默认参数的属性。这意味着在构造函数的成员初始化列表中，可以使用默认参数值来初始化成员变量，即使在创建对象时没有提供对应的参数值。</p>
+<p>对象数组可以像普通数组一样在定义的同时进行初始化</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">A</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="mi">300</span><span class="p">)};</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="382">3.8.2 对象指针<a class="headerlink" href="#382" title="Permanent link">&para;</a></h4>
+<ol>
+<li>声明对象指针的格式为：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ClassName</span><span class="w"> </span><span class="o">*</span><span class="n">ObjectPtrName</span><span class="p">;</span>
+</code></pre></div>
+<ol start="2">
+<li>用对象指针访问对象数据成员的格式为：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">ObjectPtrName</span><span class="o">-&gt;</span><span class="n">member</span><span class="p">;</span>
+</code></pre></div>
+<ol start="3">
+<li>用对象指针访问对象成员函数的格式为：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">ObjectPtrName</span><span class="o">-&gt;</span><span class="n">funct</span><span class="p">(</span><span class="n">argvs</span><span class="p">);</span>
+</code></pre></div>
+<p>同一般变量的指针一样，对象指针在使用之前必须先进行<strong>初始化</strong>。可以让它指 向一个<strong>已定义的对象</strong>，也可以用 <strong>new</strong> 运算符动态建立堆对象。</p>
+<h5 id="3821">3.8.2.1 通过对象指针间接访问对象成员的格式：<a class="headerlink" href="#3821" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">(</span><span class="o">*</span><span class="n">PtrName</span><span class="p">).</span><span class="n">member</span><span class="p">;</span><span class="w"> </span><span class="c1">// 访问数据成员</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="p">(</span><span class="o">*</span><span class="n">PtrName</span><span class="p">).</span><span class="n">func</span><span class="p">(</span><span class="n">argvs</span><span class="p">);</span><span class="w"> </span><span class="c1">// 访问成员函数</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">PtrName</span><span class="o">-&gt;</span><span class="n">member</span><span class="w"> </span><span class="c1">// 访问数据成员</span>
+</code></pre></div>
+<p>e.g.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">#include</span><span class="cpf">&lt;stdafx.h&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Square</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="n">Square</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Output</span><span class="p">();</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="p">};</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="n">Square</span><span class="o">::</span><span class="n">Square</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="o">:</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">    </span><span class="n">length</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">{}</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="kt">void</span><span class="w"> </span><span class="n">Square</span><span class="o">::</span><span class="n">Output</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Square Area:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="p">}</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="w">    </span><span class="n">Square</span><span class="w"> </span><span class="nf">s</span><span class="p">(</span><span class="mf">2.5</span><span class="p">),</span><span class="w"> </span><span class="o">*</span><span class="n">s1</span><span class="p">;</span>
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="w">    </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">;</span>
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="w">    </span><span class="n">s1</span><span class="o">-&gt;</span><span class="n">Output</span><span class="p">();</span>
+<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="w">    </span><span class="n">Square</span><span class="w"> </span><span class="o">*</span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Square</span><span class="p">(</span><span class="mf">3.5</span><span class="p">);</span>
+<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a><span class="w">    </span><span class="n">s2</span><span class="o">-&gt;</span><span class="n">Output</span><span class="p">();</span>
+<a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a><span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span>
+<a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a><span class="p">}</span>
+</code></pre></div>
+<p>也可以通过对象指针来访问对象数组，这时对象指针指向对象数组的首地址。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">Box</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">Box</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;volume of a[&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;] is &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">volume</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="383-this">3.8.3 this 指针<a class="headerlink" href="#383-this" title="Permanent link">&para;</a></h4>
+<p>this 指针是一个隐含于每一个成员函数中的特殊指针。它是一个指向正操作该成员函数的对象。当对一个对象调用成员函数时，编译程序先将对象的地址赋给 this 指针，然后调用成员函数。每次成员函数存取数据成员时， C++ 编译器将根据 this 指针所指向的对象来确定应该引用哪一个对象的数据成员。 通常 this 指针在系统中是隐含存在的，也可以把它显式表示出来。</p>
+<blockquote>
+<p>[!Warning] 静态成员函数没有 this 指针。</p>
+</blockquote>
+<h3 id="39">3.9 向函数传递对象<a class="headerlink" href="#39" title="Permanent link">&para;</a></h3>
+<p>C++ 语言中，函数的参数和返回值的传递方式有三种：值传递、 指针传递和引用传递。其方法与传递其它类型的数据一样。</p>
+<h4 id="391">3.9.1 使用对象作为函数参数<a class="headerlink" href="#391" title="Permanent link">&para;</a></h4>
+<p>把作为实参的对象的值<strong>复制</strong>给形参创建的局部对象，这种传递是单向的，只从实参到形参。因此，函数对形参值做的改变<strong>不会影响到实参</strong>。</p>
+<h4 id="392">3.9.2 使用对象指针作为函数参数<a class="headerlink" href="#392" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Square</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">    </span><span class="n">Square</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Add</span><span class="p">(</span><span class="n">Square</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">);</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="p">};</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="n">Square</span><span class="o">::</span><span class="n">Square</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="o">:</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">    </span><span class="n">length</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="p">{}</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="kt">void</span><span class="w"> </span><span class="n">Square</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="n">Square</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="w">    </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="o">-&gt;</span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="p">}</span>
+</code></pre></div>
+<h4 id="393">3.9.3 使用对象引用作为函数参数<a class="headerlink" href="#393" title="Permanent link">&para;</a></h4>
+<p>采用了引用方式进行参数传递，形参对象就相当于是实参对象的“别名”，对形参的操作其实<strong>就是对实参的操作</strong>。
+使用对象引用作为函数参数不但有指针作为参数的优点，而且比指针作为参数更简单、更直接。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Square</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="n">Square</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Add</span><span class="p">(</span><span class="n">Square</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">);</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">};</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="n">Square</span><span class="o">::</span><span class="n">Square</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">len</span><span class="p">)</span><span class="o">:</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="n">length</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="p">{}</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="kt">void</span><span class="w"> </span><span class="n">Square</span><span class="o">::</span><span class="n">Add</span><span class="p">(</span><span class="n">Square</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>[!Warning] 注意规则：
+1. 引用被创建的同时必须被初始化（指针则可以在任何时候被初始 化）。
+2. 不能有 NULL 引用，引用必须与合法的存储单元关联（指针则可以 是 NULL ）。
+3. 一旦引用被初始化，就不能改变引用的关系（指针则可以随时改变 所指的对象）。</p>
+</blockquote>
+<h4 id="394">3.9.4 三种传递方式比较<a class="headerlink" href="#394" title="Permanent link">&para;</a></h4>
+<ol>
+<li>值传递是单向的，形参的改变并不引起实参的改变。指针和引用 传递是双向的，可以将改变由形参“传给”实参。</li>
+<li>引用是 C++ 中的概念。 int m; int &amp;n = m; n 相当 m 的别名或 者绰号，对 n 的任何操作就是对 m 的操作。所以 n 既不是 m 的拷贝，也不 是指向 m 的指针，其实 n 就是 m 它自己。实际上“引用”可以做的任何事情 “指针”也都能够做。</li>
+<li>指针能够毫无约束地操作内存中的任何东西。指针虽然功能强大，但是用起来十分危险，所以如果的确只需要借 用一下某个对象的“别名”，那么就用“引用”，而不要用“指针”，以免发生意外。</li>
+<li>使用引用作为函数参数与使用指针作为函数参数相 比较，前者更容易使用、更清晰，而且当参数传递的数据较大时，引用传递参数的效率高和所占存储空间更小。</li>
+</ol>
+<h3 id="310">3.10 对象的赋值和复制<a class="headerlink" href="#310" title="Permanent link">&para;</a></h3>
+<h4 id="3101">3.10.1 对象赋值的一般形式为：<a class="headerlink" href="#3101" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w"> </span><span class="n">ObjectName1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ObjectName2</span><span class="p">;</span>
+</code></pre></div>
+<p>对象名 l 和对象名 2 必须属于同一个类的两个对象。</p>
+<ol>
+<li>对象的赋值只对其中的数据成员赋值，不对成员函数赋值。数据成员是占存储空间的，不同对象的数据成员占有不同的存储空间， 赋值的过程是将一个对象的数据成员在存储空间的状态复制给另一对象 的数据成员的存储空间。而不同对象的成员函数是同一个函数代码段， 不需要、也无法对它们赋值。</li>
+<li>类的数据成员中不能包括动态分配的数据，否则在赋值时可 能出现意想不到的严重后果</li>
+</ol>
+<h4 id="3102">3.10.2 拷贝构造函数<a class="headerlink" href="#3102" title="Permanent link">&para;</a></h4>
+<p>对象初始化：</p>
+<ol>
+<li>创建对象时由构造函数初始化；</li>
+<li>用已有的同类的对象通过赋值方式进行初始化。</li>
+</ol>
+<p>通过赋值方式进行初始化的过程，实际上是通过类的拷贝构造函数 来完成的。 拷贝构造函数是一种特殊的构造函数，它具有一般构造函数的所有 特性，但其形参是本类对象的引用。</p>
+<p>拷贝构造函数定义格式如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">构造函数名</span><span class="p">(</span><span class="n">类名</span><span class="w"> </span><span class="o">&amp;</span><span class="p">)</span><span class="err">；</span>
+</code></pre></div>
+<p>拷贝构造函数的参数采用<strong>引用</strong>方式。
+特点：</p>
+<ol>
+<li>函数名与类名<strong>相同</strong>，并且该函数<strong>没有</strong>返回值。</li>
+<li>该函数只有一个参数，并且是同类对象的<strong>引用</strong>。</li>
+<li>每个类都必须有一个拷贝构造函数。如果类中没有定义，则系统会自动生成一个默认拷贝构造函数</li>
+</ol>
+<p><strong>使用</strong>拷贝构造函数时注意：</p>
+<ol>
+<li>并不是所有的类声明都需要拷贝构造函数，仅当准备用传值的方式传递类对象时，才要拷贝构造函数。</li>
+<li>拷贝构造函数的名字必须与类名相同，并且没有返回值。</li>
+<li>拷贝构造函数只有一个参数，必须是本类对象的引用。</li>
+<li>每一个类必须至少有一个拷贝构造函数。如果用户在定义类时没有给出拷贝构造函数，系统会自动产生一个缺省的拷贝构造函数。</li>
+</ol>
+<h3 id="311">3.11 对象的组合<a class="headerlink" href="#311" title="Permanent link">&para;</a></h3>
+<p>所谓类的组合是指一个<strong>类内嵌其它类的对象作为本类的成员</strong>。两者之间是包含 与被包含的关系。</p>
+<p>··</p>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://giscus.app/client.js"
+  data-repo="AnjaReese/AnjaReese.github.io"
+  data-repo-id="R_kgDOKwmQmQ"
+  data-category="Show and tell"
+  data-category-id="DIC_kwDOKwmQmc4Cbla-"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="light_protanopia"
+  data-lang="en"
+  crossorigin="anonymous"
+  async>
+  </script>
+  <script>
+    if (document.querySelector("body").getAttribute("data-md-color-scheme") === "slate") {
+      var giscus = document.querySelector("script[src*=giscus]")
+      giscus.setAttribute("data-theme", "https://gcore.jsdelivr.net/gh/TonyCrane/lab-hypotensor/docs/css/giscus.css") 
+    }
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      AnjaReese
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/AnyaReese/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide", "announce.dismiss", "navigation.prune", "content.code.annotate", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://cdn.tonycrane.cc/utils/katex.min.js"></script>
+      
+        <script src="../../../../js/katex.js"></script>
+      
+    
+  </body>
+</html>

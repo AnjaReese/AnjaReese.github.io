@@ -1,0 +1,3469 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>面向对象程序设计2023-2024秋冬考前测试</title>
+  <style>/* stylelint-disable */
+:root {
+  --color-primary: hsl(212, 89%, 53%);
+  --color-secondary: hsl(208, 7%, 46%);
+  --color-pass: hsl(100, 60%, 47%);
+  --color-danger: hsl(3, 68%, 53%);
+  --color-warning: hsl(35, 90%, 50%);
+  --color-ac: hsl(3, 89%, 53%);
+  --color-wa: hsl(100, 89%, 45%);
+  --color-pta: hsl(212, 87%, 30%);
+  --color-pds: hsl(23, 100%, 57%);
+  --color-pat: hsl(199, 88%, 57%);
+  --color-oms: hsl(175, 74%, 37%);
+  --color-zoj: hsl(227, 59%, 40%);
+  --color-es: hsl(45, 100%, 50%);
+  --text-black: hsl(0, 0%, 0%);
+  --text-dark: hsl(0, 0%, 10%);
+  --text-normal: hsl(0, 0%, 25%);
+  --text-light: hsl(0, 0%, 45%);
+  --text-lightest: hsl(0, 0%, 60%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-black-r: hsl(0, 0%, 100%);
+  --border-all: hsla(0, 0%, 0%, 0.06);
+  --bg-base: hsl(0, 0%, 100%);
+  --bg-light: hsl(211, 20%, 97%);
+  --bg-normal: hsl(211, 20%, 93%);
+  --bg-site: hsl(204, 24%, 95%);
+  --bg-base-r: hsl(0, 0%, 25%);
+  --scroll-thumb: hsl(0, 0%, 85%);
+  --problem-set-landing-from: hsl(214, 100%, 97%);
+  --active-brightness: 0.85;
+  --transition-fast: 0.15s;
+  --transition-normal: 0.2s;
+  --transition-slow: 0.4s;
+  --height-header: 3.5rem;
+  --height-exclude-header: calc(100vh - var(--height-header));
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: 'Harmony', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+@supports (font-variant-ligatures: none) {
+  :root {
+    --font-mono: 'JBMono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", var(--font-sans);
+  }
+}
+.dark {
+  --color-primary: hsl(212, 100%, 60%);
+  --color-pta: hsl(212, 100%, 60%);
+  --text-black: hsl(0, 0%, 100%);
+  --text-dark: hsl(0, 0%, 90%);
+  --text-normal: hsl(0, 0%, 75%);
+  --text-light: hsl(0, 0%, 60%);
+  --text-lightest: hsl(0, 0%, 50%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-black-r: hsl(0, 0%, 0%);
+  --border-all: hsla(0, 0%, 100%, 0.06);
+  --bg-base: hsl(0, 0%, 25%);
+  --bg-light: hsl(0, 0%, 28%);
+  --bg-normal: hsl(0, 0%, 31%);
+  --bg-site: hsl(0, 0%, 20%);
+  --bg-base-r: hsl(0, 0%, 100%);
+  --scroll-thumb: hsl(0, 0%, 45%);
+  --problem-set-landing-from: hsl(214, 50%, 10%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-variant-ligatures: none!important;
+}
+.border,
+.border-b,
+.border-t,
+.border-l,
+.border-r,
+.border-2,
+.border-b-2,
+.border-t-2,
+.border-l-2,
+.border-r-2,
+.divide-y > *,
+.divide-x > * {
+  border: 0 solid;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--text-normal);
+  text-align: left;
+  background-color: var(--bg-base);
+}
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+dt {
+  font-weight: 700;
+}
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+blockquote {
+  margin: 0 0 1rem;
+}
+dfn {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: 800;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:not([href]):not([tabindex]) {
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+svg:not(:root) {
+  overflow: hidden;
+  vertical-align: middle;
+}
+figure {
+  margin: 0 0 1rem;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: var(--text-dark);
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+  white-space: nowrap;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+button {
+  border-radius: 0;
+}
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+select {
+  color: var(--text-normal);
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+output {
+  display: inline-block;
+}
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.15rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+mark {
+  padding: 0.2em;
+  background-color: var(--bg-light);
+}
+:focus {
+  outline: 1px dotted var(--color-primary);
+}
+:focus[class*=active] {
+  outline: none;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-normal);
+  background-color: var(--bg-base);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.125rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(10, 73, 145, 0.25);
+}
+.form-control::placeholder {
+  color: var(--text-lightest);
+  opacity: 1;
+}
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: var(--bg-light);
+  opacity: 1;
+}
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.0625rem + 2px);
+}
+select.form-control:focus::-ms-value {
+  color: var(--text-normal);
+  background-color: var(--bg-base);
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-normal);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--bg-normal);
+  border: 1px solid var(--border-all);
+  border-radius: 0.125rem;
+}
+.input-group > .form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+.input-group > .form-control + .form-control {
+  margin-left: -1px;
+}
+.input-group > .form-control:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group > .form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.dark {
+  color: var(--text-normal);
+  background-color: var(--bg-site);
+}
+.dark .modal-title {
+  color: var(--color-primary);
+}
+.dark .modal-header .close {
+  color: var(--text-black);
+}
+.dark .modal-content,
+.dark .form-control {
+  background-color: var(--bg-site);
+  color: var(--text-normal);
+}
+.dark .modal-footer {
+  border-color: var(--border-all);
+}
+.dark .input-group-text {
+  background: var(--bg-light);
+  color: var(--text-normal);
+  border-color: var(--border-all);
+}
+.dark .form-control {
+  border: 1px solid var(--border-all);
+}
+.dark .page-link {
+  background-color: var(--bg-base) !important;
+  color: var(--text-normal) !important;
+}
+.dark .page-item.active .page-link {
+  border-color: var(--color-primary);
+}
+.dark .breadcrumb {
+  background: var(--bg-light);
+}
+.dark .card {
+  background: var(--bg-base);
+}
+.dark .card-header {
+  border-color: var(--border-all);
+}
+.dark .alert-secondary {
+  background: var(--bg-light);
+  color: var(--text-normal);
+}
+.dark .nav-tabs {
+  border-color: var(--border-all);
+}
+.dark .nav-link.active {
+  border-color: var(--border-all);
+  background: var(--bg-light);
+  color: var(--text-white);
+}
+.dark .SingleDatePicker * {
+  background: var(--bg-site) !important;
+  color: var(--text-normal) !important;
+}
+.dark a {
+  color: var(--color-primary);
+}
+.dark a:not(.pc-button):hover {
+  color: var(--text-white) !important;
+}
+.dark hr {
+  border-color: var(--border-all);
+}
+.dark input {
+  caret-color: var(--text-black);
+  color: var(--text-black);
+}
+.dark input[type="radio"]:checked {
+  outline: 1px solid var(--color-primary);
+}
+.pc-layout {
+  display: flex;
+  min-width: 0;
+}
+.pc-layout.inline {
+  display: inline-flex;
+}
+.pc-layout > * {
+  flex: none;
+}
+.pc-h {
+  display: flex;
+  min-width: 0;
+}
+.pc-h.inline {
+  display: inline-flex;
+}
+.pc-h > * {
+  flex: none;
+}
+.pc-v {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+.pc-v.inline {
+  display: inline-flex;
+}
+.pc-v > * {
+  flex: none;
+}
+.pc-v.pc-gap-default > :not(:first-child) {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.pc-v.pc-gap-0 > :not(:first-child) {
+  margin-top: 0rem;
+}
+.pc-v.pc-gap-0 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-1 > :not(:first-child) {
+  margin-top: 0.0625rem;
+}
+.pc-v.pc-gap-1 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-2 > :not(:first-child) {
+  margin-top: 0.125rem;
+}
+.pc-v.pc-gap-2 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-3 > :not(:first-child) {
+  margin-top: 0.1875rem;
+}
+.pc-v.pc-gap-3 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-4 > :not(:first-child) {
+  margin-top: 0.25rem;
+}
+.pc-v.pc-gap-4 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-5 > :not(:first-child) {
+  margin-top: 0.3125rem;
+}
+.pc-v.pc-gap-5 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-6 > :not(:first-child) {
+  margin-top: 0.375rem;
+}
+.pc-v.pc-gap-6 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-7 > :not(:first-child) {
+  margin-top: 0.4375rem;
+}
+.pc-v.pc-gap-7 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-8 > :not(:first-child) {
+  margin-top: 0.5rem;
+}
+.pc-v.pc-gap-8 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-9 > :not(:first-child) {
+  margin-top: 0.5625rem;
+}
+.pc-v.pc-gap-9 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-10 > :not(:first-child) {
+  margin-top: 0.625rem;
+}
+.pc-v.pc-gap-10 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-11 > :not(:first-child) {
+  margin-top: 0.6875rem;
+}
+.pc-v.pc-gap-11 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-12 > :not(:first-child) {
+  margin-top: 0.75rem;
+}
+.pc-v.pc-gap-12 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-14 > :not(:first-child) {
+  margin-top: 0.875rem;
+}
+.pc-v.pc-gap-14 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-16 > :not(:first-child) {
+  margin-top: 1rem;
+}
+.pc-v.pc-gap-16 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-20 > :not(:first-child) {
+  margin-top: 1.25rem;
+}
+.pc-v.pc-gap-20 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-24 > :not(:first-child) {
+  margin-top: 1.5rem;
+}
+.pc-v.pc-gap-24 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-28 > :not(:first-child) {
+  margin-top: 1.75rem;
+}
+.pc-v.pc-gap-28 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-32 > :not(:first-child) {
+  margin-top: 2rem;
+}
+.pc-v.pc-gap-32 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-36 > :not(:first-child) {
+  margin-top: 2.25rem;
+}
+.pc-v.pc-gap-36 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-40 > :not(:first-child) {
+  margin-top: 2.5rem;
+}
+.pc-v.pc-gap-40 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-44 > :not(:first-child) {
+  margin-top: 2.75rem;
+}
+.pc-v.pc-gap-44 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-48 > :not(:first-child) {
+  margin-top: 3rem;
+}
+.pc-v.pc-gap-48 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-52 > :not(:first-child) {
+  margin-top: 3.25rem;
+}
+.pc-v.pc-gap-52 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-56 > :not(:first-child) {
+  margin-top: 3.5rem;
+}
+.pc-v.pc-gap-56 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-60 > :not(:first-child) {
+  margin-top: 3.75rem;
+}
+.pc-v.pc-gap-60 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-64 > :not(:first-child) {
+  margin-top: 4rem;
+}
+.pc-v.pc-gap-64 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-72 > :not(:first-child) {
+  margin-top: 4.5rem;
+}
+.pc-v.pc-gap-72 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-80 > :not(:first-child) {
+  margin-top: 5rem;
+}
+.pc-v.pc-gap-80 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.pc-gap-96 > :not(:first-child) {
+  margin-top: 6rem;
+}
+.pc-v.pc-gap-96 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-v.flex-reverse {
+  flex-direction: column-reverse;
+}
+.pc-v > * {
+  max-width: 100%;
+}
+.pc-v > hr {
+  width: 100%;
+}
+.pc-image {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+}
+.pc-image.inline {
+  display: inline-flex;
+}
+.pc-image > * {
+  flex: none;
+}
+.pc-image > img {
+  width: 100%;
+  height: 100%;
+}
+.pc-image.match-width > img:not(.default) {
+  height: auto;
+}
+.pc-image.match-height > img:not(.default) {
+  width: auto;
+}
+.pc-image.original > img:not(.default) {
+  object-fit: none;
+  width: auto;
+  height: auto;
+}
+.pc-avatar {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.pc-avatar.inline {
+  display: inline-flex;
+}
+.pc-avatar > * {
+  flex: none;
+}
+.pc-avatar > img {
+  width: 100%;
+  height: 100%;
+}
+.pc-avatar.match-width > img:not(.default) {
+  height: auto;
+}
+.pc-avatar.match-height > img:not(.default) {
+  width: auto;
+}
+.pc-avatar.original > img:not(.default) {
+  object-fit: none;
+  width: auto;
+  height: auto;
+}
+.pc-badge {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  --color: var(--text-normal);
+  color: var(--color);
+  border-radius: 4px;
+  height: 1.3125rem;
+  padding: 0 0.5rem;
+}
+.pc-badge.inline {
+  display: inline-flex;
+}
+.pc-badge > * {
+  flex: none;
+}
+.pc-badge > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+.pc-badge:not(.pc-outline) {
+  color: var(--text-white);
+}
+.pc-badge.pc-outline {
+  border: 1px solid;
+}
+.pc-text {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  --color: var(--text-normal);
+  color: var(--color);
+}
+.pc-text.inline {
+  display: inline-flex;
+}
+.pc-text > * {
+  flex: none;
+}
+.pc-text > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+.pc-text-raw {
+  flex: auto;
+  word-break: break-all;
+}
+.pc-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  --color: var(--text-normal);
+  color: var(--color);
+  font-weight: 600;
+  color: var(--text-black);
+}
+.pc-title.inline {
+  display: inline-flex;
+}
+.pc-title > * {
+  flex: none;
+}
+.pc-title > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+.pc-icon {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 0;
+}
+.pc-icon.inline {
+  display: inline-flex;
+}
+.pc-icon > * {
+  flex: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+.pc-icon.spinner {
+  animation: spin 1s infinite ease-in-out;
+}
+.pc-icon-raw {
+  font-size: 1rem;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.pc-icon-raw.pc-md {
+  font-size: 1rem;
+}
+.pc-icon-raw.pc-lg {
+  font-size: 1.25rem;
+}
+.pc-icon-raw.pc-xl {
+  font-size: 1.5rem;
+}
+.pc-search-input {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  height: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  padding: 0 0.75rem;
+}
+.pc-search-input.inline {
+  display: inline-flex;
+}
+.pc-search-input > * {
+  flex: none;
+}
+.pc-search-input > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+.pc-search-input.active {
+  border-color: var(--color-primary);
+}
+.pc-search-input-input {
+  width: 0;
+  height: 100%;
+  flex: auto;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-black);
+}
+.pc-search-input-input::placeholder {
+  color: var(--text-lightest);
+  font-style: italic;
+}
+.pc-iii {
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  align-items: center;
+}
+.pc-iii.inline {
+  display: inline-flex;
+}
+.pc-iii > * {
+  flex: none;
+}
+.pc-iii-left {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.pc-iii-left.inline {
+  display: inline-flex;
+}
+.pc-iii-left > * {
+  flex: none;
+}
+.pc-iii-center {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-grow: 0;
+}
+.pc-iii-center.inline {
+  display: inline-flex;
+}
+.pc-iii-center > * {
+  flex: none;
+}
+.pc-iii-right {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  justify-content: flex-end;
+}
+.pc-iii-right.inline {
+  display: inline-flex;
+}
+.pc-iii-right > * {
+  flex: none;
+}
+.pc-list {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+.pc-list.inline {
+  display: inline-flex;
+}
+.pc-list > * {
+  flex: none;
+}
+.pc-list.pc-gap-default > :not(:first-child) {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.pc-list.pc-gap-0 > :not(:first-child) {
+  margin-top: 0rem;
+}
+.pc-list.pc-gap-0 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-1 > :not(:first-child) {
+  margin-top: 0.0625rem;
+}
+.pc-list.pc-gap-1 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-2 > :not(:first-child) {
+  margin-top: 0.125rem;
+}
+.pc-list.pc-gap-2 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-3 > :not(:first-child) {
+  margin-top: 0.1875rem;
+}
+.pc-list.pc-gap-3 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-4 > :not(:first-child) {
+  margin-top: 0.25rem;
+}
+.pc-list.pc-gap-4 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-5 > :not(:first-child) {
+  margin-top: 0.3125rem;
+}
+.pc-list.pc-gap-5 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-6 > :not(:first-child) {
+  margin-top: 0.375rem;
+}
+.pc-list.pc-gap-6 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-7 > :not(:first-child) {
+  margin-top: 0.4375rem;
+}
+.pc-list.pc-gap-7 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-8 > :not(:first-child) {
+  margin-top: 0.5rem;
+}
+.pc-list.pc-gap-8 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-9 > :not(:first-child) {
+  margin-top: 0.5625rem;
+}
+.pc-list.pc-gap-9 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-10 > :not(:first-child) {
+  margin-top: 0.625rem;
+}
+.pc-list.pc-gap-10 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-11 > :not(:first-child) {
+  margin-top: 0.6875rem;
+}
+.pc-list.pc-gap-11 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-12 > :not(:first-child) {
+  margin-top: 0.75rem;
+}
+.pc-list.pc-gap-12 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-14 > :not(:first-child) {
+  margin-top: 0.875rem;
+}
+.pc-list.pc-gap-14 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-16 > :not(:first-child) {
+  margin-top: 1rem;
+}
+.pc-list.pc-gap-16 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-20 > :not(:first-child) {
+  margin-top: 1.25rem;
+}
+.pc-list.pc-gap-20 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-24 > :not(:first-child) {
+  margin-top: 1.5rem;
+}
+.pc-list.pc-gap-24 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-28 > :not(:first-child) {
+  margin-top: 1.75rem;
+}
+.pc-list.pc-gap-28 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-32 > :not(:first-child) {
+  margin-top: 2rem;
+}
+.pc-list.pc-gap-32 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-36 > :not(:first-child) {
+  margin-top: 2.25rem;
+}
+.pc-list.pc-gap-36 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-40 > :not(:first-child) {
+  margin-top: 2.5rem;
+}
+.pc-list.pc-gap-40 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-44 > :not(:first-child) {
+  margin-top: 2.75rem;
+}
+.pc-list.pc-gap-44 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-48 > :not(:first-child) {
+  margin-top: 3rem;
+}
+.pc-list.pc-gap-48 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-52 > :not(:first-child) {
+  margin-top: 3.25rem;
+}
+.pc-list.pc-gap-52 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-56 > :not(:first-child) {
+  margin-top: 3.5rem;
+}
+.pc-list.pc-gap-56 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-60 > :not(:first-child) {
+  margin-top: 3.75rem;
+}
+.pc-list.pc-gap-60 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-64 > :not(:first-child) {
+  margin-top: 4rem;
+}
+.pc-list.pc-gap-64 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-72 > :not(:first-child) {
+  margin-top: 4.5rem;
+}
+.pc-list.pc-gap-72 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-80 > :not(:first-child) {
+  margin-top: 5rem;
+}
+.pc-list.pc-gap-80 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.pc-gap-96 > :not(:first-child) {
+  margin-top: 6rem;
+}
+.pc-list.pc-gap-96 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list.flex-reverse {
+  flex-direction: column-reverse;
+}
+.pc-list > * {
+  max-width: 100%;
+}
+.pc-list > hr {
+  width: 100%;
+}
+.pc-list-item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+  transition: background-color var(--transition-normal);
+}
+.pc-list-item.inline {
+  display: inline-flex;
+}
+.pc-list-item > * {
+  flex: none;
+}
+.pc-list-item > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+.pc-list-item.active {
+  background-color: hsla(212, 89%, 53%, 0.1);
+}
+.pc-list-item:hover {
+  background-color: var(--bg-light);
+}
+.pc-list-item.pc-sm {
+  padding: 0.25rem;
+}
+.pc-list-item.pc-sm .pc-list-item-main > :not(:first-child) {
+  margin-top: 0;
+}
+.pc-list-item-main {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  flex: auto;
+}
+.pc-list-item-main.inline {
+  display: inline-flex;
+}
+.pc-list-item-main > * {
+  flex: none;
+}
+.pc-list-item-main.pc-gap-default > :not(:first-child) {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.pc-list-item-main.pc-gap-0 > :not(:first-child) {
+  margin-top: 0rem;
+}
+.pc-list-item-main.pc-gap-0 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-1 > :not(:first-child) {
+  margin-top: 0.0625rem;
+}
+.pc-list-item-main.pc-gap-1 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-2 > :not(:first-child) {
+  margin-top: 0.125rem;
+}
+.pc-list-item-main.pc-gap-2 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-3 > :not(:first-child) {
+  margin-top: 0.1875rem;
+}
+.pc-list-item-main.pc-gap-3 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-4 > :not(:first-child) {
+  margin-top: 0.25rem;
+}
+.pc-list-item-main.pc-gap-4 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-5 > :not(:first-child) {
+  margin-top: 0.3125rem;
+}
+.pc-list-item-main.pc-gap-5 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-6 > :not(:first-child) {
+  margin-top: 0.375rem;
+}
+.pc-list-item-main.pc-gap-6 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-7 > :not(:first-child) {
+  margin-top: 0.4375rem;
+}
+.pc-list-item-main.pc-gap-7 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-8 > :not(:first-child) {
+  margin-top: 0.5rem;
+}
+.pc-list-item-main.pc-gap-8 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-9 > :not(:first-child) {
+  margin-top: 0.5625rem;
+}
+.pc-list-item-main.pc-gap-9 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-10 > :not(:first-child) {
+  margin-top: 0.625rem;
+}
+.pc-list-item-main.pc-gap-10 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-11 > :not(:first-child) {
+  margin-top: 0.6875rem;
+}
+.pc-list-item-main.pc-gap-11 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-12 > :not(:first-child) {
+  margin-top: 0.75rem;
+}
+.pc-list-item-main.pc-gap-12 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-14 > :not(:first-child) {
+  margin-top: 0.875rem;
+}
+.pc-list-item-main.pc-gap-14 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-16 > :not(:first-child) {
+  margin-top: 1rem;
+}
+.pc-list-item-main.pc-gap-16 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-20 > :not(:first-child) {
+  margin-top: 1.25rem;
+}
+.pc-list-item-main.pc-gap-20 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-24 > :not(:first-child) {
+  margin-top: 1.5rem;
+}
+.pc-list-item-main.pc-gap-24 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-28 > :not(:first-child) {
+  margin-top: 1.75rem;
+}
+.pc-list-item-main.pc-gap-28 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-32 > :not(:first-child) {
+  margin-top: 2rem;
+}
+.pc-list-item-main.pc-gap-32 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-36 > :not(:first-child) {
+  margin-top: 2.25rem;
+}
+.pc-list-item-main.pc-gap-36 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-40 > :not(:first-child) {
+  margin-top: 2.5rem;
+}
+.pc-list-item-main.pc-gap-40 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-44 > :not(:first-child) {
+  margin-top: 2.75rem;
+}
+.pc-list-item-main.pc-gap-44 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-48 > :not(:first-child) {
+  margin-top: 3rem;
+}
+.pc-list-item-main.pc-gap-48 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-52 > :not(:first-child) {
+  margin-top: 3.25rem;
+}
+.pc-list-item-main.pc-gap-52 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-56 > :not(:first-child) {
+  margin-top: 3.5rem;
+}
+.pc-list-item-main.pc-gap-56 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-60 > :not(:first-child) {
+  margin-top: 3.75rem;
+}
+.pc-list-item-main.pc-gap-60 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-64 > :not(:first-child) {
+  margin-top: 4rem;
+}
+.pc-list-item-main.pc-gap-64 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-72 > :not(:first-child) {
+  margin-top: 4.5rem;
+}
+.pc-list-item-main.pc-gap-72 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-80 > :not(:first-child) {
+  margin-top: 5rem;
+}
+.pc-list-item-main.pc-gap-80 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.pc-gap-96 > :not(:first-child) {
+  margin-top: 6rem;
+}
+.pc-list-item-main.pc-gap-96 > :not(:first-child) {
+  margin-left: 0;
+}
+.pc-list-item-main.flex-reverse {
+  flex-direction: column-reverse;
+}
+.pc-list-item-main > * {
+  max-width: 100%;
+}
+.pc-list-item-main > hr {
+  width: 100%;
+}
+.pc-list-item-main > :not(:first-child) {
+  margin-top: 0.5rem;
+}
+.pc-button {
+  display: flex;
+  min-width: 0;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0 0.9375rem;
+  --color: var(--color-primary);
+  color: var(--color);
+  background: var(--color);
+  user-select: none;
+  transition: all var(--transition-normal);
+}
+.pc-button.inline {
+  display: inline-flex;
+}
+.pc-button > * {
+  flex: none;
+}
+.pc-button:focus {
+  outline: none;
+}
+.pc-button:focus:not(:hover) {
+  box-shadow: 0 0 0.25rem 0.0625rem var(--color-primary);
+}
+.pc-button:hover {
+  color: var(--color);
+  text-decoration: none;
+}
+.pc-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.pc-button:not(.disabled) {
+  filter: brightness(var(--brightness, ''));
+}
+.pc-button:not(.disabled):hover {
+  --brightness: var(--active-brightness);
+}
+.pc-button:not(.disabled):active {
+  transform: translateY(0.0625rem);
+}
+.pc-button:not(.pc-button-text).pc-sm {
+  height: 1.5rem;
+}
+.pc-button:not(.pc-button-text).pc-md {
+  height: 2rem;
+}
+.pc-button:not(.pc-button-text).pc-lg {
+  height: 2.5rem;
+}
+.pc-button-outline,
+.pc-button-text,
+.pc-button-borderless {
+  background: none;
+}
+.pc-button-outline:not(.disabled):hover,
+.pc-button-borderless:not(.disabled):hover {
+  filter: none;
+  background-color: var(--bg-light);
+}
+.pc-button-outline {
+  border-color: var(--color);
+}
+.pc-button-text {
+  height: auto;
+  border-style: none;
+  border-width: 0;
+  border-color: currentColor;
+  padding: 0;
+  border-radius: 0;
+}
+.pc-slider {
+  overflow: hidden;
+  position: relative;
+}
+.pc-slider .pc-slider-container {
+  transition: transform var(--transition-slow);
+}
+.pc-slider .pc-slider-indicator,
+.pc-slider .pc-slider-operator {
+  position: absolute;
+  transition: opacity var(--transition-normal);
+}
+.pc-slider .pc-slider-indicator:hover,
+.pc-slider .pc-slider-operator:hover,
+.pc-slider .pc-slider-indicator:focus,
+.pc-slider .pc-slider-operator:focus {
+  opacity: 1;
+}
+.pc-slider:not(:hover):not(:focus-within) > .pc-slider-indicator,
+.pc-slider .pc-slider-operator {
+  opacity: 0;
+}
+.pc-slider .pc-slider-indicator {
+  bottom: 0;
+  padding: 0.5rem 0;
+}
+.pc-slider .pc-slider-indicator:not(.right) {
+  left: 0.5rem;
+}
+.pc-slider .pc-slider-indicator:not(.left) {
+  right: 0.5rem;
+}
+.pc-slider .pc-slider-indicator > * {
+  width: 0.75rem;
+  height: 0.5rem;
+  margin: 0 0.25rem;
+  border-radius: 0.25rem;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  transition: width var(--transition-fast) linear, margin var(--transition-fast) linear, background-color var(--transition-fast) linear;
+}
+.pc-slider .pc-slider-indicator > *.active {
+  width: 1.5rem;
+  margin: 0;
+}
+.pc-slider .pc-slider-indicator > *.active,
+.pc-slider .pc-slider-indicator > *:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+.pc-slider .pc-slider-operator {
+  top: 0;
+  bottom: 0;
+}
+.pc-slider .pc-slider-operator.left {
+  left: 0;
+}
+.pc-slider .pc-slider-operator.right {
+  right: 0;
+}
+.pc-dtfd {
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .pc-dtfd:not(.multiline) {
+    display: flex;
+  }
+}
+.pc-dtfd-lbl {
+  margin: 0.5rem 0;
+  padding-right: 1rem;
+}
+.pc-dtfd-lbl .pc-dtfd-label.pc-required:before {
+  content: '*';
+  margin-right: 0.25rem;
+  color: var(--color-danger);
+}
+.pc-dtfd-lbl .pc-dtfd-hint {
+  display: inline-flex;
+}
+@media only screen and (min-width: 768px) {
+  .pc-dtfd-lbl {
+    flex: 0 0 16.67%;
+  }
+  .pc-dtfd-lbl .pc-dtfd-hint {
+    display: flex;
+  }
+}
+.pc-dtfd-ipt .pc-dtfd-msg {
+  margin-top: 0.25rem;
+}
+@media only screen and (min-width: 768px) {
+  .pc-dtfd-ipt {
+    flex: auto;
+  }
+}
+.interactive {
+  filter: brightness(var(--brightness, ''));
+}
+.interactive:hover {
+  --brightness: var(--active-brightness);
+}
+.pc-color-black {
+  --color: var(--text-black);
+  --active-brightness: 1.5;
+  color: var(--color);
+}
+.pc-active-black:hover {
+  --color: var(--text-black);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-dark {
+  --color: var(--text-dark);
+  --active-brightness: 1.5;
+  color: var(--color);
+}
+.pc-active-dark:hover {
+  --color: var(--text-dark);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-normal {
+  --color: var(--text-normal);
+  --active-brightness: 1.5;
+  color: var(--color);
+}
+.pc-active-normal:hover {
+  --color: var(--text-normal);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-light {
+  --color: var(--text-light);
+  --active-brightness: 1.5;
+  color: var(--color);
+}
+.pc-active-light:hover {
+  --color: var(--text-light);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-lightest {
+  --color: var(--text-lightest);
+  --active-brightness: 1.5;
+  color: var(--color);
+}
+.pc-active-lightest:hover {
+  --color: var(--text-lightest);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-white {
+  --color: var(--text-white);
+  --active-brightness: 1.5;
+  color: var(--color);
+}
+.pc-active-white:hover {
+  --color: var(--text-white);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-inherit {
+  color: currentColor;
+  --color: currentColor;
+}
+.pc-color-primary {
+  --color: var(--color-primary);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-primary:hover {
+  --color: var(--color-primary);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-secondary {
+  --color: var(--color-secondary);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-secondary:hover {
+  --color: var(--color-secondary);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-pass {
+  --color: var(--color-pass);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-pass:hover {
+  --color: var(--color-pass);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-danger {
+  --color: var(--color-danger);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-danger:hover {
+  --color: var(--color-danger);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-warning {
+  --color: var(--color-warning);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-warning:hover {
+  --color: var(--color-warning);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-ac {
+  --color: var(--color-ac);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-ac:hover {
+  --color: var(--color-ac);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-wa {
+  --color: var(--color-wa);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-wa:hover {
+  --color: var(--color-wa);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-pta {
+  --color: var(--color-pta);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-pta:hover {
+  --color: var(--color-pta);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-pds {
+  --color: var(--color-pds);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-pds:hover {
+  --color: var(--color-pds);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-pat {
+  --color: var(--color-pat);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-pat:hover {
+  --color: var(--color-pat);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-oms {
+  --color: var(--color-oms);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-oms:hover {
+  --color: var(--color-oms);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-zoj {
+  --color: var(--color-zoj);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-zoj:hover {
+  --color: var(--color-zoj);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.pc-color-es {
+  --color: var(--color-es);
+  --active-brightness: 0.85;
+  color: var(--color);
+}
+.pc-active-es:hover {
+  --color: var(--color-es);
+  --active-brightness: 1;
+  color: var(--color);
+}
+.bd-top-1 {
+  border-top: 1px solid var(--border-all);
+}
+.bd-bottom-1 {
+  border-bottom: 1px solid var(--border-all);
+}
+.bd-left-1 {
+  border-left: 1px solid var(--border-all);
+}
+.bd-right-1 {
+  border-right: 1px solid var(--border-all);
+}
+.bd-1 {
+  border: 1px solid var(--border-all);
+}
+.pc-bg-base {
+  background-color: var(--bg-base);
+}
+.pc-bg-light {
+  background-color: var(--bg-light);
+}
+.pc-bg-normal {
+  background-color: var(--bg-normal);
+}
+.pc-bg-site {
+  background-color: var(--bg-site);
+}
+.pc-bg-primary {
+  background-color: var(--color-primary);
+}
+.pc-bg-secondary {
+  background-color: var(--color-secondary);
+}
+.pc-bg-pass {
+  background-color: var(--color-pass);
+}
+.pc-bg-danger {
+  background-color: var(--color-danger);
+}
+.pc-bg-warning {
+  background-color: var(--color-warning);
+}
+.pc-bg-ac {
+  background-color: var(--color-ac);
+}
+.pc-bg-wa {
+  background-color: var(--color-wa);
+}
+.pc-bg-pta {
+  background-color: var(--color-pta);
+}
+.pc-bg-pds {
+  background-color: var(--color-pds);
+}
+.pc-bg-pat {
+  background-color: var(--color-pat);
+}
+.pc-bg-oms {
+  background-color: var(--color-oms);
+}
+.pc-bg-zoj {
+  background-color: var(--color-zoj);
+}
+.pc-bg-es {
+  background-color: var(--color-es);
+}
+.grow {
+  flex-grow: 1;
+}
+.no-grow {
+  flex-grow: 0;
+}
+.shrink {
+  flex-shrink: 1;
+}
+.no-shrink {
+  flex-shrink: 0;
+}
+.radius-2 {
+  border-radius: 0.125rem;
+}
+.radius-4 {
+  border-radius: 0.25rem;
+}
+.pc-gap-default > :not(:first-child) {
+  margin-left: 0.5rem;
+}
+.pc-gap-0 > :not(:first-child) {
+  margin-left: 0rem;
+}
+.pc-gap-1 > :not(:first-child) {
+  margin-left: 0.0625rem;
+}
+.pc-gap-2 > :not(:first-child) {
+  margin-left: 0.125rem;
+}
+.pc-gap-3 > :not(:first-child) {
+  margin-left: 0.1875rem;
+}
+.pc-gap-4 > :not(:first-child) {
+  margin-left: 0.25rem;
+}
+.pc-gap-5 > :not(:first-child) {
+  margin-left: 0.3125rem;
+}
+.pc-gap-6 > :not(:first-child) {
+  margin-left: 0.375rem;
+}
+.pc-gap-7 > :not(:first-child) {
+  margin-left: 0.4375rem;
+}
+.pc-gap-8 > :not(:first-child) {
+  margin-left: 0.5rem;
+}
+.pc-gap-9 > :not(:first-child) {
+  margin-left: 0.5625rem;
+}
+.pc-gap-10 > :not(:first-child) {
+  margin-left: 0.625rem;
+}
+.pc-gap-11 > :not(:first-child) {
+  margin-left: 0.6875rem;
+}
+.pc-gap-12 > :not(:first-child) {
+  margin-left: 0.75rem;
+}
+.pc-gap-14 > :not(:first-child) {
+  margin-left: 0.875rem;
+}
+.pc-gap-16 > :not(:first-child) {
+  margin-left: 1rem;
+}
+.pc-gap-20 > :not(:first-child) {
+  margin-left: 1.25rem;
+}
+.pc-gap-24 > :not(:first-child) {
+  margin-left: 1.5rem;
+}
+.pc-gap-28 > :not(:first-child) {
+  margin-left: 1.75rem;
+}
+.pc-gap-32 > :not(:first-child) {
+  margin-left: 2rem;
+}
+.pc-gap-36 > :not(:first-child) {
+  margin-left: 2.25rem;
+}
+.pc-gap-40 > :not(:first-child) {
+  margin-left: 2.5rem;
+}
+.pc-gap-44 > :not(:first-child) {
+  margin-left: 2.75rem;
+}
+.pc-gap-48 > :not(:first-child) {
+  margin-left: 3rem;
+}
+.pc-gap-52 > :not(:first-child) {
+  margin-left: 3.25rem;
+}
+.pc-gap-56 > :not(:first-child) {
+  margin-left: 3.5rem;
+}
+.pc-gap-60 > :not(:first-child) {
+  margin-left: 3.75rem;
+}
+.pc-gap-64 > :not(:first-child) {
+  margin-left: 4rem;
+}
+.pc-gap-72 > :not(:first-child) {
+  margin-left: 4.5rem;
+}
+.pc-gap-80 > :not(:first-child) {
+  margin-left: 5rem;
+}
+.pc-gap-96 > :not(:first-child) {
+  margin-left: 6rem;
+}
+.pc-grid {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+}
+.pc-grid.inline {
+  display: inline-flex;
+}
+.pc-grid.pc-gap-default {
+  margin: -0.5rem;
+}
+.pc-grid.pc-gap-default > * {
+  margin: 0.5rem;
+}
+.pc-grid.pc-gap-0 {
+  margin: 0rem;
+}
+.pc-grid.pc-gap-0 > * {
+  margin: 0rem;
+}
+.pc-grid.pc-gap-1 {
+  margin: -0.0625rem;
+}
+.pc-grid.pc-gap-1 > * {
+  margin: 0.0625rem;
+}
+.pc-grid.pc-gap-2 {
+  margin: -0.125rem;
+}
+.pc-grid.pc-gap-2 > * {
+  margin: 0.125rem;
+}
+.pc-grid.pc-gap-3 {
+  margin: -0.1875rem;
+}
+.pc-grid.pc-gap-3 > * {
+  margin: 0.1875rem;
+}
+.pc-grid.pc-gap-4 {
+  margin: -0.25rem;
+}
+.pc-grid.pc-gap-4 > * {
+  margin: 0.25rem;
+}
+.pc-grid.pc-gap-5 {
+  margin: -0.3125rem;
+}
+.pc-grid.pc-gap-5 > * {
+  margin: 0.3125rem;
+}
+.pc-grid.pc-gap-6 {
+  margin: -0.375rem;
+}
+.pc-grid.pc-gap-6 > * {
+  margin: 0.375rem;
+}
+.pc-grid.pc-gap-7 {
+  margin: -0.4375rem;
+}
+.pc-grid.pc-gap-7 > * {
+  margin: 0.4375rem;
+}
+.pc-grid.pc-gap-8 {
+  margin: -0.5rem;
+}
+.pc-grid.pc-gap-8 > * {
+  margin: 0.5rem;
+}
+.pc-grid.pc-gap-9 {
+  margin: -0.5625rem;
+}
+.pc-grid.pc-gap-9 > * {
+  margin: 0.5625rem;
+}
+.pc-grid.pc-gap-10 {
+  margin: -0.625rem;
+}
+.pc-grid.pc-gap-10 > * {
+  margin: 0.625rem;
+}
+.pc-grid.pc-gap-11 {
+  margin: -0.6875rem;
+}
+.pc-grid.pc-gap-11 > * {
+  margin: 0.6875rem;
+}
+.pc-grid.pc-gap-12 {
+  margin: -0.75rem;
+}
+.pc-grid.pc-gap-12 > * {
+  margin: 0.75rem;
+}
+.pc-grid.pc-gap-14 {
+  margin: -0.875rem;
+}
+.pc-grid.pc-gap-14 > * {
+  margin: 0.875rem;
+}
+.pc-grid.pc-gap-16 {
+  margin: -1rem;
+}
+.pc-grid.pc-gap-16 > * {
+  margin: 1rem;
+}
+.pc-grid.pc-gap-20 {
+  margin: -1.25rem;
+}
+.pc-grid.pc-gap-20 > * {
+  margin: 1.25rem;
+}
+.pc-grid.pc-gap-24 {
+  margin: -1.5rem;
+}
+.pc-grid.pc-gap-24 > * {
+  margin: 1.5rem;
+}
+.pc-grid.pc-gap-28 {
+  margin: -1.75rem;
+}
+.pc-grid.pc-gap-28 > * {
+  margin: 1.75rem;
+}
+.pc-grid.pc-gap-32 {
+  margin: -2rem;
+}
+.pc-grid.pc-gap-32 > * {
+  margin: 2rem;
+}
+.pc-grid.pc-gap-36 {
+  margin: -2.25rem;
+}
+.pc-grid.pc-gap-36 > * {
+  margin: 2.25rem;
+}
+.pc-grid.pc-gap-40 {
+  margin: -2.5rem;
+}
+.pc-grid.pc-gap-40 > * {
+  margin: 2.5rem;
+}
+.pc-grid.pc-gap-44 {
+  margin: -2.75rem;
+}
+.pc-grid.pc-gap-44 > * {
+  margin: 2.75rem;
+}
+.pc-grid.pc-gap-48 {
+  margin: -3rem;
+}
+.pc-grid.pc-gap-48 > * {
+  margin: 3rem;
+}
+.pc-grid.pc-gap-52 {
+  margin: -3.25rem;
+}
+.pc-grid.pc-gap-52 > * {
+  margin: 3.25rem;
+}
+.pc-grid.pc-gap-56 {
+  margin: -3.5rem;
+}
+.pc-grid.pc-gap-56 > * {
+  margin: 3.5rem;
+}
+.pc-grid.pc-gap-60 {
+  margin: -3.75rem;
+}
+.pc-grid.pc-gap-60 > * {
+  margin: 3.75rem;
+}
+.pc-grid.pc-gap-64 {
+  margin: -4rem;
+}
+.pc-grid.pc-gap-64 > * {
+  margin: 4rem;
+}
+.pc-grid.pc-gap-72 {
+  margin: -4.5rem;
+}
+.pc-grid.pc-gap-72 > * {
+  margin: 4.5rem;
+}
+.pc-grid.pc-gap-80 {
+  margin: -5rem;
+}
+.pc-grid.pc-gap-80 > * {
+  margin: 5rem;
+}
+.pc-grid.pc-gap-96 {
+  margin: -6rem;
+}
+.pc-grid.pc-gap-96 > * {
+  margin: 6rem;
+}
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-column.pc-gap-default > :not(:first-child) {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.flex-column.pc-gap-0 > :not(:first-child) {
+  margin-top: 0rem;
+}
+.flex-column.pc-gap-0 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-1 > :not(:first-child) {
+  margin-top: 0.0625rem;
+}
+.flex-column.pc-gap-1 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-2 > :not(:first-child) {
+  margin-top: 0.125rem;
+}
+.flex-column.pc-gap-2 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-3 > :not(:first-child) {
+  margin-top: 0.1875rem;
+}
+.flex-column.pc-gap-3 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-4 > :not(:first-child) {
+  margin-top: 0.25rem;
+}
+.flex-column.pc-gap-4 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-5 > :not(:first-child) {
+  margin-top: 0.3125rem;
+}
+.flex-column.pc-gap-5 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-6 > :not(:first-child) {
+  margin-top: 0.375rem;
+}
+.flex-column.pc-gap-6 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-7 > :not(:first-child) {
+  margin-top: 0.4375rem;
+}
+.flex-column.pc-gap-7 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-8 > :not(:first-child) {
+  margin-top: 0.5rem;
+}
+.flex-column.pc-gap-8 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-9 > :not(:first-child) {
+  margin-top: 0.5625rem;
+}
+.flex-column.pc-gap-9 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-10 > :not(:first-child) {
+  margin-top: 0.625rem;
+}
+.flex-column.pc-gap-10 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-11 > :not(:first-child) {
+  margin-top: 0.6875rem;
+}
+.flex-column.pc-gap-11 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-12 > :not(:first-child) {
+  margin-top: 0.75rem;
+}
+.flex-column.pc-gap-12 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-14 > :not(:first-child) {
+  margin-top: 0.875rem;
+}
+.flex-column.pc-gap-14 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-16 > :not(:first-child) {
+  margin-top: 1rem;
+}
+.flex-column.pc-gap-16 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-20 > :not(:first-child) {
+  margin-top: 1.25rem;
+}
+.flex-column.pc-gap-20 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-24 > :not(:first-child) {
+  margin-top: 1.5rem;
+}
+.flex-column.pc-gap-24 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-28 > :not(:first-child) {
+  margin-top: 1.75rem;
+}
+.flex-column.pc-gap-28 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-32 > :not(:first-child) {
+  margin-top: 2rem;
+}
+.flex-column.pc-gap-32 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-36 > :not(:first-child) {
+  margin-top: 2.25rem;
+}
+.flex-column.pc-gap-36 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-40 > :not(:first-child) {
+  margin-top: 2.5rem;
+}
+.flex-column.pc-gap-40 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-44 > :not(:first-child) {
+  margin-top: 2.75rem;
+}
+.flex-column.pc-gap-44 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-48 > :not(:first-child) {
+  margin-top: 3rem;
+}
+.flex-column.pc-gap-48 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-52 > :not(:first-child) {
+  margin-top: 3.25rem;
+}
+.flex-column.pc-gap-52 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-56 > :not(:first-child) {
+  margin-top: 3.5rem;
+}
+.flex-column.pc-gap-56 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-60 > :not(:first-child) {
+  margin-top: 3.75rem;
+}
+.flex-column.pc-gap-60 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-64 > :not(:first-child) {
+  margin-top: 4rem;
+}
+.flex-column.pc-gap-64 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-72 > :not(:first-child) {
+  margin-top: 4.5rem;
+}
+.flex-column.pc-gap-72 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-80 > :not(:first-child) {
+  margin-top: 5rem;
+}
+.flex-column.pc-gap-80 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.pc-gap-96 > :not(:first-child) {
+  margin-top: 6rem;
+}
+.flex-column.pc-gap-96 > :not(:first-child) {
+  margin-left: 0;
+}
+.flex-column.flex-reverse {
+  flex-direction: column-reverse;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-m {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.pc-trs-fast {
+  transition-duration: var(--transition-fast);
+}
+.pc-trs-normal {
+  transition-duration: var(--transition-normal);
+}
+.pc-trs-slow {
+  transition-duration: var(--transition-slow);
+}
+.scroll {
+  overflow: auto;
+  scroll-behavior: smooth;
+  --scroll-bar: transparent;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-bar);
+}
+.scroll::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: var(--scroll-bar);
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: var(--scroll-thumb);
+}
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-track-light {
+  --scroll-bar: var(--bg-light);
+}
+.pc-shadow {
+  box-shadow: 0 0.125rem 0.625rem 0.125rem var(--bg-normal);
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.flex-1 {
+  min-width: 0;
+}
+.flex-col {
+  max-width: 100%;
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-mono,
+.code {
+  font-family: var(--font-mono);
+}
+.memorial-day {
+  filter: grayscale(100%);
+}
+[class^='gap-']:not(.grid):empty:before,
+[class*=' gap-']:not(.grid):empty:before {
+  content: '';
+}
+.no-flex-gap .gap-y-0:not(.grid) > :not([hidden]) {
+  @apply mb-0;
+}
+.no-flex-gap .gap-x-0:not(.grid) > :not([hidden]) {
+  @apply mr-0;
+}
+.no-flex-gap .gap-0:not(.grid) > :not([hidden]) {
+  @apply mr-0 mb-0;
+}
+.no-flex-gap .gap-y-1:not(.grid) > :not([hidden]) {
+  @apply mb-1;
+}
+.no-flex-gap .gap-x-1:not(.grid) > :not([hidden]) {
+  @apply mr-1;
+}
+.no-flex-gap .gap-1:not(.grid) > :not([hidden]) {
+  @apply mr-1 mb-1;
+}
+.no-flex-gap .gap-y-2:not(.grid) > :not([hidden]) {
+  @apply mb-2;
+}
+.no-flex-gap .gap-x-2:not(.grid) > :not([hidden]) {
+  @apply mr-2;
+}
+.no-flex-gap .gap-2:not(.grid) > :not([hidden]) {
+  @apply mr-2 mb-2;
+}
+.no-flex-gap .gap-y-3:not(.grid) > :not([hidden]) {
+  @apply mb-3;
+}
+.no-flex-gap .gap-x-3:not(.grid) > :not([hidden]) {
+  @apply mr-3;
+}
+.no-flex-gap .gap-3:not(.grid) > :not([hidden]) {
+  @apply mr-3 mb-3;
+}
+.no-flex-gap .gap-y-4:not(.grid) > :not([hidden]) {
+  @apply mb-4;
+}
+.no-flex-gap .gap-x-4:not(.grid) > :not([hidden]) {
+  @apply mr-4;
+}
+.no-flex-gap .gap-4:not(.grid) > :not([hidden]) {
+  @apply mr-4 mb-4;
+}
+.no-flex-gap .gap-y-5:not(.grid) > :not([hidden]) {
+  @apply mb-5;
+}
+.no-flex-gap .gap-x-5:not(.grid) > :not([hidden]) {
+  @apply mr-5;
+}
+.no-flex-gap .gap-5:not(.grid) > :not([hidden]) {
+  @apply mr-5 mb-5;
+}
+.no-flex-gap .gap-y-6:not(.grid) > :not([hidden]) {
+  @apply mb-6;
+}
+.no-flex-gap .gap-x-6:not(.grid) > :not([hidden]) {
+  @apply mr-6;
+}
+.no-flex-gap .gap-6:not(.grid) > :not([hidden]) {
+  @apply mr-6 mb-6;
+}
+.no-flex-gap .gap-y-7:not(.grid) > :not([hidden]) {
+  @apply mb-7;
+}
+.no-flex-gap .gap-x-7:not(.grid) > :not([hidden]) {
+  @apply mr-7;
+}
+.no-flex-gap .gap-7:not(.grid) > :not([hidden]) {
+  @apply mr-7 mb-7;
+}
+.no-flex-gap .gap-y-8:not(.grid) > :not([hidden]) {
+  @apply mb-8;
+}
+.no-flex-gap .gap-x-8:not(.grid) > :not([hidden]) {
+  @apply mr-8;
+}
+.no-flex-gap .gap-8:not(.grid) > :not([hidden]) {
+  @apply mr-8 mb-8;
+}
+.no-flex-gap .gap-y-9:not(.grid) > :not([hidden]) {
+  @apply mb-9;
+}
+.no-flex-gap .gap-x-9:not(.grid) > :not([hidden]) {
+  @apply mr-9;
+}
+.no-flex-gap .gap-9:not(.grid) > :not([hidden]) {
+  @apply mr-9 mb-9;
+}
+.no-flex-gap .gap-y-10:not(.grid) > :not([hidden]) {
+  @apply mb-10;
+}
+.no-flex-gap .gap-x-10:not(.grid) > :not([hidden]) {
+  @apply mr-10;
+}
+.no-flex-gap .gap-10:not(.grid) > :not([hidden]) {
+  @apply mr-10 mb-10;
+}
+.no-flex-gap .gap-y-11:not(.grid) > :not([hidden]) {
+  @apply mb-11;
+}
+.no-flex-gap .gap-x-11:not(.grid) > :not([hidden]) {
+  @apply mr-11;
+}
+.no-flex-gap .gap-11:not(.grid) > :not([hidden]) {
+  @apply mr-11 mb-11;
+}
+.no-flex-gap .gap-y-12:not(.grid) > :not([hidden]) {
+  @apply mb-12;
+}
+.no-flex-gap .gap-x-12:not(.grid) > :not([hidden]) {
+  @apply mr-12;
+}
+.no-flex-gap .gap-12:not(.grid) > :not([hidden]) {
+  @apply mr-12 mb-12;
+}
+.no-flex-gap .gap-y-14:not(.grid) > :not([hidden]) {
+  @apply mb-14;
+}
+.no-flex-gap .gap-x-14:not(.grid) > :not([hidden]) {
+  @apply mr-14;
+}
+.no-flex-gap .gap-14:not(.grid) > :not([hidden]) {
+  @apply mr-14 mb-14;
+}
+.no-flex-gap .gap-y-16:not(.grid) > :not([hidden]) {
+  @apply mb-16;
+}
+.no-flex-gap .gap-x-16:not(.grid) > :not([hidden]) {
+  @apply mr-16;
+}
+.no-flex-gap .gap-16:not(.grid) > :not([hidden]) {
+  @apply mr-16 mb-16;
+}
+.no-flex-gap .gap-y-20:not(.grid) > :not([hidden]) {
+  @apply mb-20;
+}
+.no-flex-gap .gap-x-20:not(.grid) > :not([hidden]) {
+  @apply mr-20;
+}
+.no-flex-gap .gap-20:not(.grid) > :not([hidden]) {
+  @apply mr-20 mb-20;
+}
+.no-flex-gap .gap-y-24:not(.grid) > :not([hidden]) {
+  @apply mb-24;
+}
+.no-flex-gap .gap-x-24:not(.grid) > :not([hidden]) {
+  @apply mr-24;
+}
+.no-flex-gap .gap-24:not(.grid) > :not([hidden]) {
+  @apply mr-24 mb-24;
+}
+.no-flex-gap .gap-y-28:not(.grid) > :not([hidden]) {
+  @apply mb-28;
+}
+.no-flex-gap .gap-x-28:not(.grid) > :not([hidden]) {
+  @apply mr-28;
+}
+.no-flex-gap .gap-28:not(.grid) > :not([hidden]) {
+  @apply mr-28 mb-28;
+}
+.no-flex-gap .gap-y-32:not(.grid) > :not([hidden]) {
+  @apply mb-32;
+}
+.no-flex-gap .gap-x-32:not(.grid) > :not([hidden]) {
+  @apply mr-32;
+}
+.no-flex-gap .gap-32:not(.grid) > :not([hidden]) {
+  @apply mr-32 mb-32;
+}
+.no-flex-gap .gap-y-36:not(.grid) > :not([hidden]) {
+  @apply mb-36;
+}
+.no-flex-gap .gap-x-36:not(.grid) > :not([hidden]) {
+  @apply mr-36;
+}
+.no-flex-gap .gap-36:not(.grid) > :not([hidden]) {
+  @apply mr-36 mb-36;
+}
+.no-flex-gap .gap-y-40:not(.grid) > :not([hidden]) {
+  @apply mb-40;
+}
+.no-flex-gap .gap-x-40:not(.grid) > :not([hidden]) {
+  @apply mr-40;
+}
+.no-flex-gap .gap-40:not(.grid) > :not([hidden]) {
+  @apply mr-40 mb-40;
+}
+.no-flex-gap .gap-y-44:not(.grid) > :not([hidden]) {
+  @apply mb-44;
+}
+.no-flex-gap .gap-x-44:not(.grid) > :not([hidden]) {
+  @apply mr-44;
+}
+.no-flex-gap .gap-44:not(.grid) > :not([hidden]) {
+  @apply mr-44 mb-44;
+}
+.no-flex-gap .gap-y-48:not(.grid) > :not([hidden]) {
+  @apply mb-48;
+}
+.no-flex-gap .gap-x-48:not(.grid) > :not([hidden]) {
+  @apply mr-48;
+}
+.no-flex-gap .gap-48:not(.grid) > :not([hidden]) {
+  @apply mr-48 mb-48;
+}
+.no-flex-gap .gap-y-52:not(.grid) > :not([hidden]) {
+  @apply mb-52;
+}
+.no-flex-gap .gap-x-52:not(.grid) > :not([hidden]) {
+  @apply mr-52;
+}
+.no-flex-gap .gap-52:not(.grid) > :not([hidden]) {
+  @apply mr-52 mb-52;
+}
+.no-flex-gap .gap-y-56:not(.grid) > :not([hidden]) {
+  @apply mb-56;
+}
+.no-flex-gap .gap-x-56:not(.grid) > :not([hidden]) {
+  @apply mr-56;
+}
+.no-flex-gap .gap-56:not(.grid) > :not([hidden]) {
+  @apply mr-56 mb-56;
+}
+.no-flex-gap .gap-y-60:not(.grid) > :not([hidden]) {
+  @apply mb-60;
+}
+.no-flex-gap .gap-x-60:not(.grid) > :not([hidden]) {
+  @apply mr-60;
+}
+.no-flex-gap .gap-60:not(.grid) > :not([hidden]) {
+  @apply mr-60 mb-60;
+}
+.no-flex-gap .gap-y-64:not(.grid) > :not([hidden]) {
+  @apply mb-64;
+}
+.no-flex-gap .gap-x-64:not(.grid) > :not([hidden]) {
+  @apply mr-64;
+}
+.no-flex-gap .gap-64:not(.grid) > :not([hidden]) {
+  @apply mr-64 mb-64;
+}
+.no-flex-gap .gap-y-72:not(.grid) > :not([hidden]) {
+  @apply mb-72;
+}
+.no-flex-gap .gap-x-72:not(.grid) > :not([hidden]) {
+  @apply mr-72;
+}
+.no-flex-gap .gap-72:not(.grid) > :not([hidden]) {
+  @apply mr-72 mb-72;
+}
+.no-flex-gap .gap-y-80:not(.grid) > :not([hidden]) {
+  @apply mb-80;
+}
+.no-flex-gap .gap-x-80:not(.grid) > :not([hidden]) {
+  @apply mr-80;
+}
+.no-flex-gap .gap-80:not(.grid) > :not([hidden]) {
+  @apply mr-80 mb-80;
+}
+.no-flex-gap .gap-y-96:not(.grid) > :not([hidden]) {
+  @apply mb-96;
+}
+.no-flex-gap .gap-x-96:not(.grid) > :not([hidden]) {
+  @apply mr-96;
+}
+.no-flex-gap .gap-96:not(.grid) > :not([hidden]) {
+  @apply mr-96 mb-96;
+}
+.no-flex-gap .md\:gap-y-0:not(.grid) > :not([hidden]) {
+  @apply md:mb-0;
+}
+.no-flex-gap .md\:gap-x-0:not(.grid) > :not([hidden]) {
+  @apply md:mr-0;
+}
+.no-flex-gap .md\:gap-0:not(.grid) > :not([hidden]) {
+  @apply md:mr-0 md:mb-0;
+}
+.no-flex-gap .md\:gap-y-1:not(.grid) > :not([hidden]) {
+  @apply md:mb-1;
+}
+.no-flex-gap .md\:gap-x-1:not(.grid) > :not([hidden]) {
+  @apply md:mr-1;
+}
+.no-flex-gap .md\:gap-1:not(.grid) > :not([hidden]) {
+  @apply md:mr-1 md:mb-1;
+}
+.no-flex-gap .md\:gap-y-2:not(.grid) > :not([hidden]) {
+  @apply md:mb-2;
+}
+.no-flex-gap .md\:gap-x-2:not(.grid) > :not([hidden]) {
+  @apply md:mr-2;
+}
+.no-flex-gap .md\:gap-2:not(.grid) > :not([hidden]) {
+  @apply md:mr-2 md:mb-2;
+}
+.no-flex-gap .md\:gap-y-3:not(.grid) > :not([hidden]) {
+  @apply md:mb-3;
+}
+.no-flex-gap .md\:gap-x-3:not(.grid) > :not([hidden]) {
+  @apply md:mr-3;
+}
+.no-flex-gap .md\:gap-3:not(.grid) > :not([hidden]) {
+  @apply md:mr-3 md:mb-3;
+}
+.no-flex-gap .md\:gap-y-4:not(.grid) > :not([hidden]) {
+  @apply md:mb-4;
+}
+.no-flex-gap .md\:gap-x-4:not(.grid) > :not([hidden]) {
+  @apply md:mr-4;
+}
+.no-flex-gap .md\:gap-4:not(.grid) > :not([hidden]) {
+  @apply md:mr-4 md:mb-4;
+}
+.no-flex-gap .md\:gap-y-5:not(.grid) > :not([hidden]) {
+  @apply md:mb-5;
+}
+.no-flex-gap .md\:gap-x-5:not(.grid) > :not([hidden]) {
+  @apply md:mr-5;
+}
+.no-flex-gap .md\:gap-5:not(.grid) > :not([hidden]) {
+  @apply md:mr-5 md:mb-5;
+}
+.no-flex-gap .md\:gap-y-6:not(.grid) > :not([hidden]) {
+  @apply md:mb-6;
+}
+.no-flex-gap .md\:gap-x-6:not(.grid) > :not([hidden]) {
+  @apply md:mr-6;
+}
+.no-flex-gap .md\:gap-6:not(.grid) > :not([hidden]) {
+  @apply md:mr-6 md:mb-6;
+}
+.no-flex-gap .md\:gap-y-7:not(.grid) > :not([hidden]) {
+  @apply md:mb-7;
+}
+.no-flex-gap .md\:gap-x-7:not(.grid) > :not([hidden]) {
+  @apply md:mr-7;
+}
+.no-flex-gap .md\:gap-7:not(.grid) > :not([hidden]) {
+  @apply md:mr-7 md:mb-7;
+}
+.no-flex-gap .md\:gap-y-8:not(.grid) > :not([hidden]) {
+  @apply md:mb-8;
+}
+.no-flex-gap .md\:gap-x-8:not(.grid) > :not([hidden]) {
+  @apply md:mr-8;
+}
+.no-flex-gap .md\:gap-8:not(.grid) > :not([hidden]) {
+  @apply md:mr-8 md:mb-8;
+}
+.no-flex-gap .md\:gap-y-9:not(.grid) > :not([hidden]) {
+  @apply md:mb-9;
+}
+.no-flex-gap .md\:gap-x-9:not(.grid) > :not([hidden]) {
+  @apply md:mr-9;
+}
+.no-flex-gap .md\:gap-9:not(.grid) > :not([hidden]) {
+  @apply md:mr-9 md:mb-9;
+}
+.no-flex-gap .md\:gap-y-10:not(.grid) > :not([hidden]) {
+  @apply md:mb-10;
+}
+.no-flex-gap .md\:gap-x-10:not(.grid) > :not([hidden]) {
+  @apply md:mr-10;
+}
+.no-flex-gap .md\:gap-10:not(.grid) > :not([hidden]) {
+  @apply md:mr-10 md:mb-10;
+}
+.no-flex-gap .md\:gap-y-11:not(.grid) > :not([hidden]) {
+  @apply md:mb-11;
+}
+.no-flex-gap .md\:gap-x-11:not(.grid) > :not([hidden]) {
+  @apply md:mr-11;
+}
+.no-flex-gap .md\:gap-11:not(.grid) > :not([hidden]) {
+  @apply md:mr-11 md:mb-11;
+}
+.no-flex-gap .md\:gap-y-12:not(.grid) > :not([hidden]) {
+  @apply md:mb-12;
+}
+.no-flex-gap .md\:gap-x-12:not(.grid) > :not([hidden]) {
+  @apply md:mr-12;
+}
+.no-flex-gap .md\:gap-12:not(.grid) > :not([hidden]) {
+  @apply md:mr-12 md:mb-12;
+}
+.no-flex-gap .md\:gap-y-14:not(.grid) > :not([hidden]) {
+  @apply md:mb-14;
+}
+.no-flex-gap .md\:gap-x-14:not(.grid) > :not([hidden]) {
+  @apply md:mr-14;
+}
+.no-flex-gap .md\:gap-14:not(.grid) > :not([hidden]) {
+  @apply md:mr-14 md:mb-14;
+}
+.no-flex-gap .md\:gap-y-16:not(.grid) > :not([hidden]) {
+  @apply md:mb-16;
+}
+.no-flex-gap .md\:gap-x-16:not(.grid) > :not([hidden]) {
+  @apply md:mr-16;
+}
+.no-flex-gap .md\:gap-16:not(.grid) > :not([hidden]) {
+  @apply md:mr-16 md:mb-16;
+}
+.no-flex-gap .md\:gap-y-20:not(.grid) > :not([hidden]) {
+  @apply md:mb-20;
+}
+.no-flex-gap .md\:gap-x-20:not(.grid) > :not([hidden]) {
+  @apply md:mr-20;
+}
+.no-flex-gap .md\:gap-20:not(.grid) > :not([hidden]) {
+  @apply md:mr-20 md:mb-20;
+}
+.no-flex-gap .md\:gap-y-24:not(.grid) > :not([hidden]) {
+  @apply md:mb-24;
+}
+.no-flex-gap .md\:gap-x-24:not(.grid) > :not([hidden]) {
+  @apply md:mr-24;
+}
+.no-flex-gap .md\:gap-24:not(.grid) > :not([hidden]) {
+  @apply md:mr-24 md:mb-24;
+}
+.no-flex-gap .md\:gap-y-28:not(.grid) > :not([hidden]) {
+  @apply md:mb-28;
+}
+.no-flex-gap .md\:gap-x-28:not(.grid) > :not([hidden]) {
+  @apply md:mr-28;
+}
+.no-flex-gap .md\:gap-28:not(.grid) > :not([hidden]) {
+  @apply md:mr-28 md:mb-28;
+}
+.no-flex-gap .md\:gap-y-32:not(.grid) > :not([hidden]) {
+  @apply md:mb-32;
+}
+.no-flex-gap .md\:gap-x-32:not(.grid) > :not([hidden]) {
+  @apply md:mr-32;
+}
+.no-flex-gap .md\:gap-32:not(.grid) > :not([hidden]) {
+  @apply md:mr-32 md:mb-32;
+}
+.no-flex-gap .md\:gap-y-36:not(.grid) > :not([hidden]) {
+  @apply md:mb-36;
+}
+.no-flex-gap .md\:gap-x-36:not(.grid) > :not([hidden]) {
+  @apply md:mr-36;
+}
+.no-flex-gap .md\:gap-36:not(.grid) > :not([hidden]) {
+  @apply md:mr-36 md:mb-36;
+}
+.no-flex-gap .md\:gap-y-40:not(.grid) > :not([hidden]) {
+  @apply md:mb-40;
+}
+.no-flex-gap .md\:gap-x-40:not(.grid) > :not([hidden]) {
+  @apply md:mr-40;
+}
+.no-flex-gap .md\:gap-40:not(.grid) > :not([hidden]) {
+  @apply md:mr-40 md:mb-40;
+}
+.no-flex-gap .md\:gap-y-44:not(.grid) > :not([hidden]) {
+  @apply md:mb-44;
+}
+.no-flex-gap .md\:gap-x-44:not(.grid) > :not([hidden]) {
+  @apply md:mr-44;
+}
+.no-flex-gap .md\:gap-44:not(.grid) > :not([hidden]) {
+  @apply md:mr-44 md:mb-44;
+}
+.no-flex-gap .md\:gap-y-48:not(.grid) > :not([hidden]) {
+  @apply md:mb-48;
+}
+.no-flex-gap .md\:gap-x-48:not(.grid) > :not([hidden]) {
+  @apply md:mr-48;
+}
+.no-flex-gap .md\:gap-48:not(.grid) > :not([hidden]) {
+  @apply md:mr-48 md:mb-48;
+}
+.no-flex-gap .md\:gap-y-52:not(.grid) > :not([hidden]) {
+  @apply md:mb-52;
+}
+.no-flex-gap .md\:gap-x-52:not(.grid) > :not([hidden]) {
+  @apply md:mr-52;
+}
+.no-flex-gap .md\:gap-52:not(.grid) > :not([hidden]) {
+  @apply md:mr-52 md:mb-52;
+}
+.no-flex-gap .md\:gap-y-56:not(.grid) > :not([hidden]) {
+  @apply md:mb-56;
+}
+.no-flex-gap .md\:gap-x-56:not(.grid) > :not([hidden]) {
+  @apply md:mr-56;
+}
+.no-flex-gap .md\:gap-56:not(.grid) > :not([hidden]) {
+  @apply md:mr-56 md:mb-56;
+}
+.no-flex-gap .md\:gap-y-60:not(.grid) > :not([hidden]) {
+  @apply md:mb-60;
+}
+.no-flex-gap .md\:gap-x-60:not(.grid) > :not([hidden]) {
+  @apply md:mr-60;
+}
+.no-flex-gap .md\:gap-60:not(.grid) > :not([hidden]) {
+  @apply md:mr-60 md:mb-60;
+}
+.no-flex-gap .md\:gap-y-64:not(.grid) > :not([hidden]) {
+  @apply md:mb-64;
+}
+.no-flex-gap .md\:gap-x-64:not(.grid) > :not([hidden]) {
+  @apply md:mr-64;
+}
+.no-flex-gap .md\:gap-64:not(.grid) > :not([hidden]) {
+  @apply md:mr-64 md:mb-64;
+}
+.no-flex-gap .md\:gap-y-72:not(.grid) > :not([hidden]) {
+  @apply md:mb-72;
+}
+.no-flex-gap .md\:gap-x-72:not(.grid) > :not([hidden]) {
+  @apply md:mr-72;
+}
+.no-flex-gap .md\:gap-72:not(.grid) > :not([hidden]) {
+  @apply md:mr-72 md:mb-72;
+}
+.no-flex-gap .md\:gap-y-80:not(.grid) > :not([hidden]) {
+  @apply md:mb-80;
+}
+.no-flex-gap .md\:gap-x-80:not(.grid) > :not([hidden]) {
+  @apply md:mr-80;
+}
+.no-flex-gap .md\:gap-80:not(.grid) > :not([hidden]) {
+  @apply md:mr-80 md:mb-80;
+}
+.no-flex-gap .md\:gap-y-96:not(.grid) > :not([hidden]) {
+  @apply md:mb-96;
+}
+.no-flex-gap .md\:gap-x-96:not(.grid) > :not([hidden]) {
+  @apply md:mr-96;
+}
+.no-flex-gap .md\:gap-96:not(.grid) > :not([hidden]) {
+  @apply md:mr-96 md:mb-96;
+}
+.paper {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--text-normal, hsl(0, 0%, 25%));
+}
+.paper *,
+.paper *::before,
+.paper *::after {
+  box-sizing: border-box;
+}
+.paper pre,
+.paper code,
+.paper kbd,
+.paper samp {
+  font-size: 12px;
+}
+.paper pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+.paper label {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.paper hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--scroll-thumb, hsl(0, 0%, 85%));
+  margin: 0;
+}
+.paper .result table {
+  width: 100%;
+}
+.paper .result th,
+.paper .result td {
+  border: 1px solid var(--border-all, hsla(0, 0%, 0%, 0.06));
+  text-align: center;
+}
+.paper .result .box {
+  border: 1px solid var(--border-all, hsla(0, 0%, 0%, 0.06));
+  padding: 8px;
+  color: var(--text-normal, hsl(0, 0%, 25%));
+}
+.rendered-markdown {
+  line-height: 1.5;
+}
+.rendered-markdown p {
+  margin: 0.5em 0;
+}
+.rendered-markdown p:first-child {
+  margin: 0;
+}
+.rendered-markdown h1, .rendered-markdown h2, .rendered-markdown h3, .rendered-markdown h4, .rendered-markdown h5, .rendered-markdown h6 {
+  margin: 0.8em 0;
+}
+.rendered-markdown img {
+  max-width: 100%;
+}
+.rendered-markdown textarea {
+  border-radius: 0.125rem;
+  width: 100%;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  min-height: 6.25rem;
+}
+.rendered-markdown code {
+  font-size: 0.75em;
+  background: var(--bg-light);
+  border-radius: 0.1875rem;
+  border: 1px solid var(--border-all);
+  color: #e74c3c;
+  margin: 0 0.125em;
+  white-space: pre-wrap;
+}
+.rendered-markdown pre {
+  padding: 0.375rem 0.75rem;
+  background: var(--bg-light);
+  border: 1px solid var(--border-all);
+  border-radius: 0.1875rem;
+  word-break: break-all;
+}
+.rendered-markdown pre code {
+  background: none;
+  border: none;
+  color: var(--text-normal);
+  margin: 0;
+}
+.rendered-markdown hr {
+  border: none;
+  border-top: 1px solid var(--border-all);
+}
+.rendered-markdown blockquote {
+  margin: 0.5em 0;
+  padding: 0.125rem 0.875rem;
+  font-size: 0.75rem;
+  background: var(--bg-light);
+  border-left: 4px solid var(--border-all);
+}
+.rendered-markdown blockquote p {
+  margin-bottom: 0;
+}
+.rendered-markdown table {
+  margin: 0 auto;
+}
+.rendered-markdown table th, .rendered-markdown table td {
+  border: 1px solid var(--border-all);
+  padding: 0.3125rem;
+  font-size: 0.75rem;
+}
+.katex-mathml {
+  display: none;
+}
+</style>
+  <link rel="stylesheet" href="https://static.pintia.cn/assets/katex.min.css">
+  <link rel="stylesheet" href="https://static.pintia.cn/assets/fonts.css">
+</head>
+<body>
+
+<div><div class="paper" style="max-width:940px;margin:auto"><div style="padding:16px;text-align:center;font-size:24px;font-weight:bold">面向对象程序设计2023-2024秋冬考前测试</div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">开始时间</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="01/03/2024 4:15:00 PM">01/03/2024 4:15:00 PM</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">结束时间</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="01/03/2024 5:50:00 PM">01/03/2024 5:50:00 PM</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">答题时长</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="95分钟">95分钟</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">答卷类型</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="标准答案">标准答案</span></div><div style="width:calc(100% / 3);display:inline-flex;padding:4px"><span style="font-weight:bold;min-width:56px">总分</span><span style="margin-left:8px;overflow:hidden;text-overflow:ellipsis" title="72">72</span></div><hr/><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">判断题</span><span>得分：暂无</span><span style="margin-left:20px">总分：5</span></div><div style="font-size:12px;display:block"><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">1-1</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div class="markdownBlock" lang="en"><div class="rendered-markdown"><p>In C++, if a class has a virtual destructor, then the class must also be declared as abstract.</p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1742409689028493312" disabled="" value="TRUE"/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1742409689028493312" disabled="" checked="" value="FALSE"/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">1-2</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div class="markdownBlock" lang="en"><div class="rendered-markdown"><p>In C++, a derived class has access to the private members of its base class through direct member access.</p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1742409689028493313" disabled="" value="TRUE"/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1742409689028493313" disabled="" checked="" value="FALSE"/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">1-3</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div class="markdownBlock" lang="en"><div class="rendered-markdown"><p>In C++, the <strong><code>delete</code></strong> operator can be used to deallocate memory allocated by <strong><code>new</code></strong>, and it also calls the destructor of the object.</p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1742409689028493314" disabled="" checked="" value="TRUE"/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1742409689028493314" disabled="" value="FALSE"/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">1-4</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div class="markdownBlock" lang="en"><div class="rendered-markdown"><p>In C++, a constructor can be virtual.</p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1742409689032687616" disabled="" value="TRUE"/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1742409689032687616" disabled="" checked="" value="FALSE"/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">1-5</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div class="markdownBlock" lang="en"><div class="rendered-markdown"><p>In C++, the <strong><code>this</code></strong> pointer inside a member function is a pointer to the function itself.</p>
+</div></div><div style="color:gray;word-break:keep-all">(1分)</div></div><div style="display:flex;width:100px;justify-content:space-between"><div><input type="radio" id="TRUE" name="1742409689032687617" disabled="" value="TRUE"/><label style="margin-left:4px" for="TRUE">T</label></div><div><input type="radio" id="FALSE" name="1742409689032687617" disabled="" checked="" value="FALSE"/><label style="margin-left:4px" for="FALSE">F</label></div></div></div></div></div></div><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">单选题</span><span>得分：暂无</span><span style="margin-left:20px">总分：10</span></div><div style="font-size:12px;display:block"><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">2-1</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>In C++, when creating an object of a derived class, what is the order of constructor calls?</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1742410110484742144" disabled="" checked="" value="A"/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Base class first, then derived class</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1742410110484742144" disabled="" value="B"/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Derived class first, then base class</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1742410110484742144" disabled="" value="C"/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Both constructors are called simultaneously</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1742410110484742144" disabled="" value="D"/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Depends on how the object is created</p>
+</div></div></div></label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">2-2</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>In C++, polymorphism is typically achieved through what?</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1742410110484742145" disabled="" value="A"/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Class templates</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1742410110484742145" disabled="" checked="" value="B"/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Virtual functions</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1742410110484742145" disabled="" value="C"/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Operator overloading</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1742410110484742145" disabled="" value="D"/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Default arguments</p>
+</div></div></div></label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">2-3</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>Which of the following is NOT a characteristic of encapsulation in C++?</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1742410110484742146" disabled="" value="A"/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Data hiding</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1742410110484742146" disabled="" value="B"/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Separation of interface and implementation</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1742410110484742146" disabled="" checked="" value="C"/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Inheritance mechanism</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1742410110484742146" disabled="" value="D"/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Use of access specifiers</p>
+</div></div></div></label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">2-4</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>Which of the following is an incorrect statement about namespaces in C++?</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1742410110484742147" disabled="" value="A"/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Namespaces provide a way to avoid name conflicts.</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1742410110484742147" disabled="" value="B"/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>A program can use multiple namespaces.</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1742410110484742147" disabled="" value="C"/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Namespaces can be nested.</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1742410110484742147" disabled="" checked="" value="D"/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Once declared, a namespace cannot have new members added.</p>
+</div></div></div></label></div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">2-5</div><div style="overflow:auto;flex-grow:1"><div style="display:flex"><div style="flex-grow:1"><div class="rendered-markdown"><p>In C++, which type of inheritance is NOT able to access private members from the base class?</p>
+</div></div><div style="color:gray;word-break:keep-all">(2分)</div></div><div style="flex-wrap:wrap;display:flex"><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="A" name="1742410110484742148" disabled="" value="A"/><label style="margin-left:4px" for="A"><div style="display:flex"><div>A.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Public inheritance</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="B" name="1742410110484742148" disabled="" value="B"/><label style="margin-left:4px" for="B"><div style="display:flex"><div>B.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Protected inheritance</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="C" name="1742410110484742148" disabled="" value="C"/><label style="margin-left:4px" for="C"><div style="display:flex"><div>C.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>Private inheritance</p>
+</div></div></div></label></div><div style="flex-basis:97.5%;flex-grow:1"><input type="radio" id="D" name="1742410110484742148" disabled="" checked="" value="D"/><label style="margin-left:4px" for="D"><div style="display:flex"><div>D.</div><div style="margin-left:4px"><div class="rendered-markdown"><p>All types of inheritance are not able to access private members</p>
+</div></div></div></label></div></div></div></div></div></div><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">填空题</span><span>得分：暂无</span><span style="margin-left:20px">总分：17</span></div><div style="font-size:12px;display:block"><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">4-1</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>The output of the code below is:  <span><input style="max-width:none;width:43.199999999999996ch;max-height:500px" type="text" disabled="" value="Derived::fun(), x = 5, m_number = 20"/><span style="margin-left:4px;color:gray">(2分)</span></span></p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+class Base {
+    int m_number = 0;
+public:
+    virtual void fun(int x = 5)
+    {
+        cout &lt;&lt; &quot;Base::fun(), x = &quot; &lt;&lt; x &lt;&lt; &quot; m_number = &quot; &lt;&lt; m_number &lt;&lt; endl;
+    }
+};
+class Derived : public Base {
+    int m_number = 20;
+public:
+    virtual void fun(int x = 10)
+    {
+        cout &lt;&lt; &quot;Derived::fun(), x = &quot; &lt;&lt; x &lt;&lt; &quot;, m_number = &quot; &lt;&lt; m_number &lt;&lt; endl;
+    }
+};
+
+int main()
+{
+    Derived d1;
+    Base* bp = &amp;d1;
+    bp-&gt;fun();
+    return 0;
+}<br /></code></pre>
+</div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">4-2</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>Read the following code, and write down the results:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+class Polygon {
+public:
+    Polygon(double width, double height);
+    virtual double perimeter() = 0;
+    virtual double area() = 0;
+protected:
+    double m_width, m_height;
+};
+Polygon::Polygon(double width, double height): m_width(width), m_height(height) {}
+class Rectangle : public Polygon {
+public:
+    Rectangle(double width, double height);
+    double perimeter();
+    double area();
+};
+Rectangle::Rectangle(double width, double height): Polygon(width, height) {}
+double Rectangle::perimeter() { return 2 * (m_width + m_height); }
+double Rectangle::area() { return m_width * m_height; }
+class Triangle : public Polygon {
+public:
+    Triangle(double base, double height);
+    double perimeter(); // Assuming an equilateral triangle for simplicity
+    double area();
+};
+Triangle::Triangle(double base, double height): Polygon(base, height) {}
+double Triangle::perimeter() { return 3 * m_width; }
+double Triangle::area() { return 0.5 * m_width * m_height; }
+int main() {
+    Polygon *p1 = new Rectangle(10, 20);
+    cout &lt;&lt; &quot;The perimeter of the Rectangle is &quot; &lt;&lt; p1-&gt;perimeter() &lt;&lt; endl;
+    cout &lt;&lt; &quot;The area of the Rectangle is &quot; &lt;&lt; p1-&gt;area() &lt;&lt; endl;
+    delete p1;
+    
+    Polygon *p2 = new Triangle(10, 15);
+    cout &lt;&lt; &quot;The perimeter of the Triangle is &quot; &lt;&lt; p2-&gt;perimeter() &lt;&lt; endl;
+    cout &lt;&lt; &quot;The area of the Triangle is &quot; &lt;&lt; p2-&gt;area() &lt;&lt; endl;
+    delete p2;
+    
+    return 0;
+}<br /></code></pre>
+<p><span><input style="max-width:none;width:43.199999999999996ch;max-height:500px" type="text" disabled="" value="The perimeter of the Rectangle is 60"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:38.4ch;max-height:500px" type="text" disabled="" value="The area of the Rectangle is 200"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:42ch;max-height:500px" type="text" disabled="" value="The perimeter of the Triangle is 30"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:36ch;max-height:500px" type="text" disabled="" value="The area of the Triangle is 75"/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">4-3</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>Read the following code and predict the output:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+using namespace std;
+void transform1(int a);
+void transform2(int &amp;r);
+void transform3(int *p);
+int main() {
+    int num = 10;
+    cout &lt;&lt; &quot;Original value: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    transform1(num);
+    cout &lt;&lt; &quot;After transform1: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    transform2(num);
+    cout &lt;&lt; &quot;After transform2: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    transform3(&amp;num);
+    cout &lt;&lt; &quot;After transform3: &quot; &lt;&lt; num &lt;&lt; endl;
+    
+    return 0;
+}
+// Adds 10 to the value
+void transform1(int a) {
+    a += 10;
+}
+// Multiplies the value by 2
+void transform2(int &amp;r) {
+    r *= 2;
+}
+// Subtracts 5 from the value
+void transform3(int *p) {
+    *p -= 5;
+}<br /></code></pre>
+<p><span><input style="max-width:none;width:21.599999999999998ch;max-height:500px" type="text" disabled="" value="Original value: 10"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="After transform1: 10"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="After transform2: 20"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="After transform3: 15"/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">4-4</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>Read the following code and write down the results.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+void FunctionX() {
+    std::cout &lt;&lt; &quot;Enter FunctionX\n&quot;;
+    std::cout &lt;&lt; &quot;FunctionX throwing exception\n&quot;;
+    throw 1;
+    std::cout &lt;&lt; &quot;Exit FunctionX\n&quot;;
+}
+void FunctionY() {
+    std::cout &lt;&lt; &quot;Enter FunctionY\n&quot;;
+    try {
+        FunctionX();
+    } catch (double) {
+        std::cerr &lt;&lt; &quot;FunctionY caught double exception\n&quot;;
+    }
+    std::cout &lt;&lt; &quot;Exit FunctionY\n&quot;;
+}
+void FunctionZ() {
+    std::cout &lt;&lt; &quot;Enter FunctionZ\n&quot;;
+    try {
+        FunctionY();
+    } catch (int) {
+        std::cerr &lt;&lt; &quot;FunctionZ caught int exception\n&quot;;
+    }
+    std::cout &lt;&lt; &quot;Exit FunctionZ\n&quot;;
+}
+int main() {
+    try {
+        FunctionZ();
+    } catch (int) {
+        std::cerr &lt;&lt; &quot;main caught int exception\n&quot;;
+    }
+    std::cout &lt;&lt; &quot;Exit main\n&quot;;
+    return 0;
+}<br /></code></pre>
+<p><span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="Enter FunctionZ"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="Enter FunctionY"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="Enter FunctionX"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:33.6ch;max-height:500px" type="text" disabled="" value="FunctionX throwing exception"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:36ch;max-height:500px" type="text" disabled="" value="FunctionZ caught int exception"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="Exit FunctionZ"/><span style="margin-left:4px;color:gray">(1分)</span></span><br><span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="Exit main"/><span style="margin-left:4px;color:gray">(1分)</span></span></p>
+</div></div></div></div></div></div><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">程序填空题</span><span>得分：暂无</span><span style="margin-left:20px">总分：20</span></div><div style="font-size:12px;display:block"><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">5-1</div><div style="overflow:auto;flex-grow:1"><div><div class="rendered-markdown"><p>The AccountCNY class represents an account in Chinese Yuan, and the AccountUSD class represents an account in US Dollars. The account balance is a private data member. The operation a.transfer(b, 100) denotes a transfer of 100 units of currency from account a to account b. When accounts a and b are of the same currency, the balance of a decreases by 100 and the balance of b increases by the same amount. When accounts a and b are of different currencies, the balance of a decreases by 100, but the increased balance of b should be converted at the current exchange rate.</p>
+<p>Complete the code below so that it functions correctly, assuming an exchange rate of 1 US Dollar to 6.5 Chinese Yuan.</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;stdio.h&gt;
+using namespace std;
+class AccountUSD;
+class AccountCNY {
+private:
+    double dBalance;
+public:
+    AccountCNY():dBalance(0) {}
+    void deposit(double fAmount){ //deposit function
+        <span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="dBalance += fAmount;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+    }
+    double balance(){
+        return dBalance;
+    }
+    bool transfer(AccountCNY&amp; b, double fAmount){
+        if (dBalance &lt; fAmount)
+            return false;
+        dBalance -= fAmount;
+        b.dBalance += <span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="fAmount;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+        return true;
+    }
+    bool transfer(<span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="AccountUSD&amp; b"/><span style="margin-left:4px;color:gray">(2分)</span></span>, double fAmount);
+    friend <span><input style="max-width:none;width:20.4ch;max-height:500px" type="text" disabled="" value="class AccountUSD;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+};
+class AccountUSD {
+private:
+    double dBalance;
+public:
+    AccountUSD():dBalance(0) {}
+    void deposit(double fAmount){
+        <span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="dBalance += fAmount;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+    }
+    double balance(){
+        return dBalance;
+    }
+    bool transfer(AccountUSD&amp; b, double fAmount){
+        if (dBalance &lt; fAmount)
+            return false;
+        <span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="dBalance -= fAmount;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+        b.dBalance += fAmount;
+        return true;
+    }
+    bool transfer(AccountCNY&amp; b, double fAmount);
+    friend <span><input style="max-width:none;width:20.4ch;max-height:500px" type="text" disabled="" value="class AccountCNY;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+};
+bool AccountCNY::transfer(AccountUSD&amp; b, double fAmount){
+    if (dBalance &lt; fAmount)
+        return false;
+    dBalance -= fAmount;
+    b.dBalance += <span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="fAmount/6.5;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+    return true;
+}
+bool <span><input style="max-width:none;width:24ch;max-height:500px" type="text" disabled="" value="AccountUSD::transfer"/><span style="margin-left:4px;color:gray">(2分)</span></span>(AccountCNY&amp; b, double fAmount){
+    if (dBalance &lt; fAmount)
+        return false;
+    dBalance <span><input style="max-width:none;width:19.2ch;max-height:500px" type="text" disabled="" value="-= fAmount;"/><span style="margin-left:4px;color:gray">(2分)</span></span>
+    b.dBalance += fAmount*6.5;
+    return true;
+}
+int main() {
+    AccountCNY a, b;
+    a.deposit(1000); b.deposit(1000);
+    printf(&quot;Deposit CNY 1000 to a &amp; b\n&quot;);
+    printf(&quot;CNY Account a: %.2f\n&quot;,a.balance());
+    printf(&quot;CNY Account b: %.2f\n&quot;,b.balance());
+    AccountUSD c,d;
+    c.deposit(1000); d.deposit(1000);
+    printf(&quot;Deposit USD 1000 to c &amp; d\n&quot;);
+    printf(&quot;USD Account c: %.2f\n&quot;,c.balance());
+    printf(&quot;USD Account d: %.2f\n&quot;,d.balance());
+    a.transfer(b,100);
+    printf(&quot;Transfer CNY 100 from a --&gt; b\n&quot;);
+    printf(&quot;CNY Account a: %.2f\n&quot;,a.balance());
+    printf(&quot;CNY Account b: %.2f\n&quot;,b.balance());
+    c.transfer(d,100);
+    printf(&quot;Transfer USD 100 from c --&gt; d\n&quot;);
+    printf(&quot;USD Account c: %.2f\n&quot;,c.balance());
+    printf(&quot;USD Account d: %.2f\n&quot;,d.balance());
+    a.transfer(d,650);
+    printf(&quot;Transfer CNY 650 from a --&gt; d\n&quot;);
+    printf(&quot;CNY Account a: %.2f\n&quot;,a.balance());
+    printf(&quot;USD Account d: %.2f\n&quot;,d.balance());
+    c.transfer(a,100);
+    printf(&quot;Transfer USD 100 from c --&gt; a\n&quot;);
+    printf(&quot;USD Account c: %.2f\n&quot;,c.balance());
+    printf(&quot;CNY Account a: %.2f\n&quot;,a.balance());
+    return 0;
+}
+<br /></code></pre>
+</div></div></div></div></div></div><div style="display:flex;font-size:16px;margin-top:16px"><span style="flex-grow:1;font-weight:bold">主观题</span><span>得分：暂无</span><span style="margin-left:20px">总分：20</span></div><div style="font-size:12px;display:block"><div style="margin-top:12px"><div style="display:flex"><div style="margin-right:8px;white-space:nowrap;font-weight:bold">8-1</div><div style="overflow:auto;flex-grow:1"><div style="margin-bottom:8px;display:flex"><div style="font-weight:bold">You are given the base structure of a Geometry system that can h</div><div style="margin-left:8px;color:gray">(20分)</div></div><div><div class="markdownBlock" lang="en"><div class="rendered-markdown"><p>You are given the base structure of a Geometry system that can handle different shapes. Each shape should be able to accept a visitor that performs a certain operation on the shape. Two types of visitors are defined: <code>GeometryAreaVisitor</code> for calculating areas and <code>GeometryPerimeterVisitor</code> for calculating perimeters.<br>The <code>Shape</code> hierarchy includes several derived classes such as <code>Rectangle</code>, <code>Triangle</code>, and <code>Circle</code>. Each shape must implement an accept method for each type of visitor, allowing the visitor to perform its specific operation on the shape.<br>Implement the missing classes and visitor classes based on the following requirements and code structure:</p>
+<ul>
+<li>The <code>Shape</code> class is abstract and has two derived classes: <code>Rectangle</code> and <code>Triangle</code>.  Assuming an equilateral triangle for simplicity. <code>Triangle</code> has <code>base</code> and <code>height</code> as member variables, and <code>Rectangle</code> has <code>width</code> and <code>height</code>  as member variables.</li>
+<li>Each shape class must implement an accept method for both types of visitors.</li>
+<li>Visitors should have methods specifically for each shape: <code>visitRectangle</code> and <code>visitTriangle</code>.</li>
+<li>The <code>GeometryAreaVisitor</code> calculates and prints the area of the shapes.</li>
+<li>The <code>GeometryPerimeterVisitor</code> calculates and prints the perimeter of the shapes.</li>
+</ul>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+// Forward declarations
+class Visitor;
+class Rectangle;
+class Triangle;
+// Abstract base class for shapes
+class Shape {
+public:
+    virtual void accept(class Visitor &amp;v) = 0;
+};
+// Implement the missing classes here
+
+// Concrete Visitor for calculating the perimeter
+class GeometryPerimeterVisitor : public Visitor {
+public:
+    void visitRectangle(Rectangle &amp;rectangle) override {
+        double perimeter = 2 * (rectangle.getWidth() + rectangle.getHeight());
+        std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; perimeter &lt;&lt; std::endl;
+    }
+    void visitTriangle(Triangle &amp;triangle) override {
+        // Assuming an equilateral triangle for simplicity
+        double perimeter = 3 * triangle.getBase();
+        std::cout &lt;&lt; &quot;Perimeter: &quot; &lt;&lt; perimeter &lt;&lt; std::endl;
+    }
+};
+int main() {
+    Rectangle rect(3, 4);
+    Triangle tri(4, 3);
+    GeometryAreaVisitor areaVisitor;
+    GeometryPerimeterVisitor perimeterVisitor;
+    std::cout &lt;&lt; &quot;Rectangle Operations:&quot; &lt;&lt; std::endl;
+    rect.accept(areaVisitor);
+    rect.accept(perimeterVisitor);
+    std::cout &lt;&lt; &quot;Triangle Operations:&quot; &lt;&lt; std::endl;
+    tri.accept(areaVisitor);
+    tri.accept(perimeterVisitor);
+    return 0;
+}<br /></code></pre>
+<p>Expected Output:</p>
+<pre><code>Rectangle Operations:
+Area: 12
+Perimeter: 14
+Triangle Operations:
+Area: 6
+Perimeter: 12<br /></code></pre>
+<p>Instructions:<br>Implement the <code>Rectangle</code> and  <code>Triangle</code> classes as derived from  <code>Shape</code>, as well as the  <code>Visitor</code> and  <code>GeometryAreaVisitor</code> class derived from  <code>Visitor</code>. Ensure that the main function works as expected and produces the required output.</p>
+</div></div><div class="result" style="display:flex;margin-top:8px"><div style="min-width:80px;font-weight:bold">评分标准</div></div></div></div></div></div></div></div></div>
+
+</body>
+</html>

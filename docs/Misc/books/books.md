@@ -48,11 +48,11 @@
 
 ![alt text](image-4.png)
 
-> 熊培云 《自由在高处》
+> 熊培云 《自由在高处》（歌剧《斯巴达克斯》）
 
 ![alt text](image-9.png)
-> 歌剧《斯巴达克斯》
 
+----
 
 ![alt text](image-11.png)
 
